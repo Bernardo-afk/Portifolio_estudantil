@@ -1,3 +1,3 @@
 # Portifolio_estudantil
 
-portifolio 
+portifolio .
