@@ -1,3 +1,4 @@
 # Portifolio_estudantil
 
-portifolio .
+
+Repositório que arquiva estudos 
