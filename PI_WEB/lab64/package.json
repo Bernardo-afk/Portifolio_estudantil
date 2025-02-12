@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "curl": "^0.1.4",
+    "formidable": "^3.5.1"
+  }
+}

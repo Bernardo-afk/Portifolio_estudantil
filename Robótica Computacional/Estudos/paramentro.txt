@@ -1,0 +1,33 @@
+Parametros 
+
+
+Como ver parametros entre as 'nodes'
+ -- ros2 param list
+
+ Para encontrar o tipo de um parâmetro 
+ -- ros2 param get nome_do_node nome_do_parametro
+Exemplo : ros2 param get /turltesim backgound_g
+        Terminal : Integer value is: 86
+
+
+Para alterar um valor de um parâmetro 
+-- ros2 param set nome_da_node nome_do_parametro valor
+ATENÇÂO : o camando 'set' e atribui ao parametro o novo valor até q ele seja fechado 
+
+Para alterar permanentemento o valor do parâemtro
+
+-- ros2 param dump nome_da_node
+// ros2 param dump /nome_da_node > nome_da_node.yaml
+
+
+rodar um parametro direto de um arquivo 
+-- ros2 param load <node_name> <parameter_file>
+Exemplo : ros2 param load /turtlesim turtlesim.yaml
+
+
+ATENÇÂO : ead-only parameters can only be modified at startup and not afterwards, 
+that is why there are some warnings for the “qos_overrides” parameters.
+
+iniciar um arquivo de parametro junto com o node 
+-- ros2 run <package_name> <executable_name> --ros-args --params-file <file_name>
+ex : ros2 run turtlesim turtlesim_node --ros-args --params-file turtlesim.yaml

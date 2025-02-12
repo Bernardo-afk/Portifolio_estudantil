@@ -1,0 +1,34 @@
+Registrador de sinalizadores ( FLAGS )
+
+Flags indicam o estado do processador durante a execução de cada instrução 
+
+2 tipos : Flags de estado e Flags de controle 
+
+1 reg - 16 bits // 6 Flags de estado // 3 flags de controle // 7bits não utilizaveis (sem função)
+
+FLAGS DE ESTADO {
+        CF = Flag de Carry -->  CF = 1 "Vai um" (após instruções de soma ) e "não empresta um " ( após subtração)
+                                    
+        PF = Flag de paridade --> se PF=1    PAR ( ou seja ,numero par de 1's no número)
+                                        
+        AF = Flag de Carry Auxiliar --> se AF = 1 Caso exista "vai um " do 3 bit para o 4 de uma adição e não tenha imprestimo do 4 para o 3 em uma subtração
+
+        ZF = Zero Flag   -->   ZF = 1 caso o resultado da última operação aritimetica ou lógica seja igual a zero 
+
+        SF = Flag de Sinal -->  SF = 1 número negativo 
+        Obs : cudado com overflow , muda o resultado
+
+        OF = Flag de Overflow --> OF=1 OverFlow 
+}
+
+FLAGS DE CONTROLE {
+        TF = Flag de Trap ( armadilha ) --> TF =1 após a execução da proxima intrução, ocorrerá uma interrupção 
+            obs: A própria interrupção faz TF = 0 
+        
+        IF = Flag de Interrupção --> IF = 1 habilita a ocorrência de interrupções
+                                    IF = 0 inibi interrupções tipo INT externas
+
+        DF = Flag de Direção --> DF = 1 decremento do idereço de memória
+                                    DF = 0 incrementa
+        DF ------> usado para indicar a direção em que as operações com strings são realizadas 
+}   

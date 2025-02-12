@@ -1,0 +1,89 @@
+    msg1 DB 10, 13, "Digite 1 - Binario $"
+    msg2 DB 10, 13, "Digite 2 - Hexadecimal $"
+    msg3 DB 10, 13, "Digite 3 - Decimal $"
+
+
+    home2 db 10,13, "Qual sera a base que voce deseja converter ? $"
+    msg4 DB 10, 13, "Digite 1 - Binario $"
+    msg5 DB 10, 13, "Digite 2 - Hexadecimal $"
+    msg6 DB 10, 13, "Digite 3 - Decimal $"
+
+    Entrada_numero DB 10, 13, "Digite o numero: $"
+
+
+
+
+    ---- limpatela 
+    
+
+    ; Limpa a tela
+    MOV AH, 0
+    MOV AL, 3
+    INT 10h
+
+    move_XY 25, 0       ; posiciona o cursor
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    ; Finaliza o programa
+    MOV AH, 4Ch
+    INT 21h
+MAIN ENDP
+
+
+
+chamada PROC
+
+
+    ; Exibe as mensagens iniciais
+    MOV AH, 9
+    LEA DX, home
+    INT 21h
+
+    MOV AH, 9
+    LEA DX, msg1
+    INT 21h
+
+    MOV AH, 9
+    LEA DX, msg2
+    INT 21h
+
+    MOV AH, 9
+    LEA DX, msg3
+    INT 21h
+
+    ; Pula uma linha
+    MOV AH, 2
+    MOV DL, 10
+    INT 21h
+
+    ; Lê o número de entrada do usuário
+    MOV AH, 1
+    INT 21h
+    MOV BL, AL           ; Armazena a entrada em BL
+    SUB BL, 30h          ; Converte de ASCII para número (0-9)
+
+    xor ax,ax
+    add al,bl     ; salvar escolha  , para usar futuramente 
+    push ax  
+
+
+
+    ; Limpa a tela novamente
+    MOV AH, 0
+    MOV AL, 3
+    INT 10h
+    move_XY 25, 0        ; Posiciona o cursor

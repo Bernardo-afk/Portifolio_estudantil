@@ -1,0 +1,79 @@
+Services 
+
+    Serviços são diretos, em que uma 'request' feita por um client é diretamente respondida pelo server em formato 'response'
+    Ou seja ele opera em duas partes, a requisição e a entrega
+
+        Topico x Serviço 
+
+        No tópico , o publisher envia a 'msg' pro tópico e o tópico envia para o subscriber
+        No serviço , o client envia uma 'request' para o server e o server devolve para o client a 'response'
+
+
+    Para encontrar o tipo do serviço use 
+    -- ros2 service type nome_do_serviço
+    
+    Por exemplo , na simulação do Turtlesim_node , se digitado (ros2 service type /clear), é devolvido (std_srvs_srv_Empty), 
+    A palavra 'empty' significa que o client n mandou nenhuma 'data' e recebeu a resposta de nenhum 'data'
+
+    Para ver a lista de todos os serviços em funcionamento 
+    -- ros2 service list -t    (-t = --show_-types)
+
+Exemplo do que irá retornar : (   /clear [std_srvs/srv/Empty]   )
+
+
+    Para saber a informação de um serviço específico 
+        Isso irá mostrar o numero de clientes e servers com esse comando ( utilizando/utiliza)
+    -- ros2 service info nome_do_serviço
+    Exemplo : ros2 service info /clear 
+    Deve retornar :     Type: std_srvs/srv/Empty
+                        Clients count: 0
+                        Services count: 1
+
+
+    Para encontar o local de um serviço específico 
+    -- ros2 service find nome_do_serviço
+    Exemplo: ros2 service find std_srvs/srv/Empty
+    Deve retornar : /clear e /reset
+
+
+    Como 'call' serviços por comando 
+    Você prescisa antes saber a informação contida no serviço ( execute antes service info)
+        --ros2 interface show tipo_do_serviço
+   
+   1.0     Por exemplo o serviço do /clear do serviço Empty
+            -- ros2 interface show std_srvs/srv/Empty
+            Deve retornar "---"
+            ( ATENÇÂO , o --- ele separa a request da receiver , tal que o /clear ele não envia nenhuma data, ent ele recebe nenhuma data, assim o prompt
+            está devolvendo uma "blank structure|" ).
+
+    2.0  Por exemplo o comando /spawm do serviço 
+            Deve retornar : float32 x
+                            float32 y
+                            float32 theta
+                            string name # Optional.  A unique name will be created and returned if this is empty
+                            ---
+                            string name
+            os '---' mostra que as inserções obrigatorias são x y z ,theta ; tal que o nome da tartaruga é OPCIONAL
+
+
+
+        Chamar um serviço ( service call)
+    -- ros2 service call nome_do_serviço/tipo_do_serviço/argumentos   ( argumentos são opcionais)
+Exemplo : ros2 service call /spawn turtlesim/srv/Spawn "{x: 2, y: 2, theta: 0.2, name: ''}"
+    
+
+
+        Usando o 'echo' é possivel ver a data comunicando entre o service e o client
+        -- ros2 service echo <service_name | service_type> <arguments>
+Por padrão , esse recurso de ver a 'data' entre o cliente e o servidor, vem desabilitada pro padrão , talque é possivel habilitar
+        1. -- ros2 launch demo_nodes_cpp introspect_services_launch.py
+        2. Abra outro terminal e -- ros2 param set /introspection_service service_configure_introspection contents
+                                    ros2 param set /introspection_client client_configure_introspection contents
+
+
+ 
+
+    
+
+
+

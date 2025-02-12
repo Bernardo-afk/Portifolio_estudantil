@@ -1,0 +1,43 @@
+ NODES
+
+
+
+Ver lista de nodes 
+ -- ros2 node list
+
+
+ Como trocar o nome de uma "node"
+
+ -- ros2 run package_name package_node --ros-args --remap __node:= "nome da node que vc quer"
+ Exemplo : ros2 run turtlesim turtlesim_node --ros-args --remap __node:=teste_da_tartaruga
+  ( para conferir se deu certo, digite -- ros2 node list) 
+
+
+
+
+Como ver informações sobre a "node"
+        Serve para ver eventos/alterações/caminhos em que a node opera 
+-- ros2 node info (nome_da_node)
+Exemplo : ros2 node info /teste_da_tartaruga
+
+
+
+ As nodes mandam informações pelos topicos via mensagens , tal que os subscrier e publishers recebem e mandam o mesmo tipo de mensagem para comunicar-se
+ O type da mensagem é vista antes do "ros2 topic list -t", permitindo que sejaidentificado o tipo da mensagem passando por cada tópico .
+
+ Exemplo : Analizar o cmd_vel, o tipo do topico é turtle1/cmd_vel [geometry_msgs/msg/TWIST]
+ Isso quer dizer que no pacote 'geometry_msgs' exige uma 'msg' que possui o conteudo 'twist'
+
+ Como saber o tipo de mensagen enviada ??
+
+-- ros2 interface show 'nome do tópico'
+exemplo: ros2 interface show geometry_msgs/msg/Twist   ( nesse caso ele vai mostrar a mensagem que apareceria no prompt em que foi digitado 
+o comando ' ros2 topic echo /turtle1/cmd_vel) . Isso quer dizer que o subscriber 'turtlesim' está esperando/tem a espectativa de recer uma msg de 2 vetores, 
+tais quais um linear e outro angular ( para que a tartarua se mexa) com 3 elementos X,Y,Z .
+
+Pra que usar 'ros2 interface show' ... , ao invez de usar um comando echo (usando anteriormente)?
+Pois usar o 'ros2 interface show' irá mostar o TIPO de dado passado atravez , nesse caso , um vetor ; 
+quando usado echo, ele dá o nome atribuida a função, nesse caso 'linear','angular'. É como se o 'show' mostrasse o 'generico' e o echo mostrasse o 'específico'
+
+
+

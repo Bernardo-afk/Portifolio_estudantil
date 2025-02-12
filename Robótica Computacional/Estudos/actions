@@ -1,0 +1,16 @@
+Actions
+
+Actions é uma comunicação longa , utilizando o ros2 , em que é dividida em 3 : a goal, feedback, and a result.
+
+Actions são criadas nos tópicos e serviços, tal que podem ser canceladas  e fornecem um feedback 
+(diferente dos serviços que fornecem somente uma resposta)
+
+Como ver a lista de ações 
+-- ros2 node info nome_da_node
+ex  : -- ros2 node info /turtlesim
+
+Para identificar as ações 
+ -- ros2 action list
+
+
+    

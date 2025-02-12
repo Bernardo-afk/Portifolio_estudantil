@@ -1,0 +1,375 @@
+
+
+   CPU - unidade de processamento 
+ {
+UC - Unidade de controle 
+ULA - Unidade Logica e Aritmética 
+GPR - registradores de proposito geral - ( elementos de memoria ( circuitos) responsaveis por armazenar os dados que são utilizdos
+durante a  execução de um programa ( intruções )  )  
+
+
+----------- GPR 
+
+                        Registradores específicos 
+    PC -  Program Counter : Armazen o endereço da próxima intruções a serem executadas
+        
+                        Estrutura em PC 
+        {    END                Conteúdo 
+            2                     INSTR2 
+            3                     INSTR3
+            4                     INSTR4                        
+            5                     INSTR5
+            6                     INSTR6
+            ..                    INSTR..
+        }
+
+
+    SP - Stack Pointer : Armazena o endereço do topo da   pilha  ( informações colocadas primeiro, serão as ultimas a serem tiradas)
+
+                        Estrutira em SP
+        {   END                 Conteúdo          EX : .Stack 100h (tamanho da pilha em hexa)
+            ..
+            95
+            96
+            97
+            98                   C
+            99                   B
+            100                  A
+        }
+
+    
+    RI - Registrador de instruções: Armazena a intrução de que está sendo executada 
+
+    RDM - Registrador de dados de memória : Armazena os dados de Memória ( lidos ) ou que vão para a memória ( escritos )
+
+    REM - Registrador de Endereços de memória : armazena o endereço enviado para a memória, quando ocorre um acesso á mesma ( leitura ou escrita )
+
+
+ }
+
+
+Unidades de Entrada e Saída  (responsavel por ferenciar a ligação de : CPU-MEM-Barramentos e os periféricos)
+ {
+
+    Interfaces - circuito que contabiliza a comunicação ( protocolo)  ( o controle da transferência é feita pela CPU)
+
+    Canais de E/S - circuito que controla e compatibilizam a comunicação ( A CPU apenas inicia a tranferência )
+
+    Processadores de E/S - são CPUs dedicadas a fazer E/S de dados. Iniciam e controlam a comunicação 
+
+
+ }
+
+Barramentos ( conjunto de fios que faz a ligação física entre as diversas unidades) 
+{
+
+Barramento de Endereços : por onde trafegam os Endereços 
+Barramento de Dados : por onde trafegam os Dados
+Barramento de Controle : por onde trafegam os Sinais de Controle 
+
+
+    ---- Obs 
+Internamente, na CPU, existe um barramento interno de dados que liga os registradores com a ULA e a UC, e um 
+barramento interno de controle que liga a UC a todos os elementos da CPU 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+Memórias 
+{
+
+RAM - Random Acess Memory : memória de acesso aleatório, volátil 
+        SRAM - Ram estática : só se altera quando se escreve nela ou quando desliga a tensão de alimentação 
+        DRAM - Ram dinâmica : periodicamente é necessário reescrever o seu conteúdo (refresh de memória)
+ROM - Read Only Memory: memória somente de leitura, não volátil 
+        ROM - gravação feita pelo fabricante, não apagavel 
+        PROM - Programmable ROM: programação feita pelo usuário, não apagavel 
+Flash - Memória semicondutora, não volátil e de escrita e leitura , apagável         
+
+}
+
+
+Siglas uteis 
+{ 
+
+ISA - Instruction Set Architecture ( conjunto de intruções de linguagem de máquina)
+
+
+}
+
+
+
+
+
+Di (destination) e Si ( source)   ( como se fossem ponteiros)  ( pode usar cx para indicar quantos bites quert transfeirr )
+Por exemplo, tranferir um endereço de memória de SI para DI  ( ex : 5500h --> AE5Eh )
+
+Cs (code segment )  ds ( data segment )
+cs:ip   ( como aparece) 
+valor do stack é gravado em SS:SP 
+ss  - segmento do stack 
+ds - segmento de dados 
+
+Tipos 
+uso geral ax bx cx dx 
+apontadores : Si di 
+segmentos : cs ds 
+flags : ...
+
+
+---
+
+loops 
+
+IF :                if al<=BL   ( cmp al,bl // JA label)
+                    else ( jmp label) 
+
+LOOP :          tem como parametro o registrador CX ( contador )           
+                ele salta para o rótulo de destino , e decrementa o contador (cx) 
+
+FOR LOOP     :    ex : for 80vezes :     mov cx,80
+                                        mov ah,2
+                                        mov dl,""
+                                        label: int21h
+                                        loop label
+
+WHILE LOOP : while ( conição verdadeira ) ...     
+            ex : ler caracteres até CS ( carriage return ( enter) )
+                mov dx,0 
+                mov ah,1
+                int 21h 
+              label : cmp al,0  ; é caracter CR
+                        je label-fim saltar se caractere é CR ( no caso al,0 é o enter )
+                        inc dx
+                        int 21h
+                        jmp label   
+
+REPEAT LOOP :  Repeat (cod) until (condição)
+                Ex : ler caractere até CR 
+                            MOV DX,0
+                            MOV AH,1
+                    Label : 
+                            int 21h
+                            inc dx
+                            cmp al,0
+                            jne loop
+
+
+
+Deslocamento 
+    Para a direita - divide por 2
+    Para a esquerda - multiplica por 2
+
+XOR  reg1 reg2 -   Operando xor aplica o conteudo do reg2 no reg1      ( pode ser usado para inverter : deve-se ter um 1 na posição em que deseja este efeito )
+AND reg1,bits ( notação : 00000000b)    - compara os beats do reg1 com os beats estipulados, talque o resultadp no rg será : manter os beats 1 e 0 iguais , e os que forem diferentes ele 0
+            ex : al = 11010000                  - usado para zerar beats ( clear/reset) específicos : basta ter um 0 na posição que deseja zerar
+                AND al , 11001000
+                saida = 11000000
+
+OR Pos_de_memória,Reg1        - armazena o resultado de bx na posição de memória     
+                                -ou forçar o valor 1 (setar) em bits específicos : deve-se ter um 1 na posição que se deseja este efeito
+                                - OR bl,al - insere o bit menos significativo de al, em bl 
+                        
+
+
+Colocar MSB e LSB em um registrdor 
+
+        OR reg1,8001h    - reg depois - 1111 0100 0100 0101b
+
+Converter um codigo ascii de um digito numérico em um valor binário 
+    Ex al = 39h
+         função 9 
+         AND Al,0Fh ; 0000 1111   Al depois - 0000 0111b
+
+Converter caractere de minuscula em maiuscula 
+    ex :   a = 61h - 0110 0001
+            A - 41h - 0100 0001
+                 Usar - AND AL, 0DFh    - Al depois 0100 0001b
+        Mascara -    0DFh - 1101 1111
+   
+
+Para verificar se o conteudo de um registrador é 0 
+        OR reg1,reg1 
+        Olhe o ZF ( zero flag )
+        Obs : essa forma é mais rápida de executar do que cmp cx,00h
+
+
+NOT - usado para inverter bits 
+        ex : not ax - inverte os bits de ax 
+                not al 
+                not byte1 
+
+ZERO - SF,ZF,PF refletem o resultado ( armazenado no operando de destino)
+        usado para testar resultados usando AND 
+        talque test ax,bx ; a operação and entre ax,bx  ( não obtendo resultado) , apenas alterando as FLAGS a cima 
+
+Testar se o número é par 
+            test reg1,01h
+            Ver no ZF é 1 , se for, o número é par 
+            EX : test 4444h,0001h ; zf= 1 
+
+ exemplo de programa para checar se o número é negativo ou positivo   : 
+                                                test cl,80h 
+                                                jnz pt2 
+                                                (se for pos)
+                                                pt2: 
+                                                (se for neg)
+
+    SHL (shift left) 
+    SAL (shift aritmetic left) 
+    SHR ( Shift right )
+    SAR (Shift right)
+       SF,ZF,PF
+    CF - contem o último bit deslocado para fora 
+    OF =1 se ocorrer troca de sinal após o último deslocalmente 
+
+    
+    ROL (rotate left)
+    ROR(rotate right)
+    RCL ( rotate carry left)
+    RCR ( rotate carry right)
+        SF,ZF,PF - ultimo resultado da rotação 
+        cf - contem o ultimo beat jogado para fora 
+        OF = 1 se ocorrer sinal após a troca 
+
+      sub al,37h   ; converter letra em binario 
+        ou add dl,37h
+
+-----------------------------------------
+
+Vetores 
+
+Exemplos 
+
+MSG DB 'abcde'  ; vetor  composto por um string de 5 caracteres ascii
+W DW 1010h,1020h,1030h ; vetor de 3 valores de 16 bits 
+
+Operador DUP  ; define vetores com valores reptidos (duplicatas)
+
+
+EX : 
+
+        Gama DB 100DUP(0)  ; cria um vetor de 100 bytes com o valor inicial 0, apartir do offset definido por Gama
+        Beta dw 200DUP(?)   ; cria um vetor de 200 palavras (16 bits ) não inicializados, a partir do offset beta
+
+
+LINHA db 5,4,3 DUP (2,3 DUP(0),1) ; DUP's encadeados
+Igual a = Linha db 5,4,2,0,0,0,1,2,0,0,0,1,2,0,0,0,1
+
+
+---------------------------------------
+UTIL 
+
+SI ( source index ) = usado em instruções de movimentação e comparação de strings 
+SI aponta para o endereço de fonte ( source )
+SI é usado com DS (data segment), para apontar para dados de memória
+
+DI ( destination index ) = Usado para operações de destino em manipulação de strings 
+DI é associado a ES ( extra segment )
+DI é util em cópia de dados ou para contrução de estruturas de dados complexos em memória 
+
+BP ( base pointer ) = é usado para acessar variáveis locais dentro de uma sub-rotina 
+BP quando é usado,  ele armazena o endereço da base da pilha, para facilitar o acesso as parametros e variaveis locais 
+BP é usando com SS ( stack segment) , o que permite acessar a pilha de maneira mais flexível
+
+SS ( stack segment ) = É o registrador de segmento que indica o início do segmento de pilha 
+SS - A pilha é usada para armazenar endereços de retorno , parâmetros e variáveis locais 
+SS - qualquer operação que envolva a pilha ( como push e pop ) utiliza o segmento SS em conjunto com o ponteiro de pilha ( SP )
+
+
+
+
+
+
+
+
+Modo de endereçamento 
+
+Modo Direto : (determinado no .data )
+                                Dado DB 5
+                                mov al,dado 
+
+
+Modo Indireto Por registrador 
+O offset do endereço do operando está armazenado em um registrado 
+
+                - o registrador atua como um ponteiro para a posição da memória 
+                - formato do operando : [registrador ]
+
+        Registradores Utilizados :      
+                BX,SI,DI juntamente com o registrador de segmento DS o endereço é formado por DS : [registrador]
+
+                mov BX,OFFSET DADO
+                mov AL,[BX]
+
+                BP juntamente com o segmento SS o endereço é formador por SS:BP
+
+     
+
+Modo Base 
+                O offset do Endereço do operando é obtido adicionando um Deslocamento ao conteúdo de um registrador base 
+
+Formatos possíveis do operando:
+• [registrador + deslocamento] ou [deslocamento + registrador]
+• [registrador] + deslocamento ou deslocamento + [registrador]
+• deslocamento [registrador]
+
+                Registradores Utilizados : 
+                BX ( base register) juntamente com o registrador de segmento DS 
+                BP ( base pointer ) juntamente com o registrador de segmento SS
+
+
+
+
+
+Modo Indexado (Indexed Mode)
+                                 O offset do endereço do operando é obtido adicionando um deslocamente ao conteúdo de um registrador indexado 
+                                 As opções de deslocamento são as mesmas do Modo por Base 
+Formatos possíveis do operando:
+[registrador + deslocamento] ou [deslocamento + registrador]
+[registrador] + deslocamento ou deslocamento + [registrador]
+deslocamento [registrador]
+
+                        Registradores utilizados: 
+                                SI e DI juntamente com o registrador de segmanto DS 
+
+
+Modo por base Indexado 
+
+                                O offset do endereço do operando é obtido somando : 
+                                                - O conteudo de um registrador de base ( BX ou BP )
+                                                        - o conteúdo de um registrado de indice ( SI ou DI)     
+                                                                - Opcionalmente , o offset de endereço de uma variável 
+                                                                        - Opcionalmente, uma constante ( positiva ou negativa)
+
+Formatos possíveis do operando:
+variável [reg_de_base] [reg_índice]
+variável [reg_de_base + reg_índice + constante]
+constante [reg_de_base + reg_índice + variável]
+[reg_de_base + reg_índice + variável + constante]
+
+
+
+                        Registradores utilizados        
+                                - SI,DI e BX juntamente com o registrador de segmento DS
+                                - SI,DI e BX juntamente com o registrador de segmento SS
+
+
+
+Comando XCHG 
+
+        XCHG destino,origem 
+
+        exemplo : 
+                        mov ax,10
+                        mov bx,5
+                        xchg ax,bx ; bx=10 , ax = 5

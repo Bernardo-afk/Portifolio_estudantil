@@ -1,0 +1,98 @@
+
+RQT
+
+
+
+
+RQT graph No turtlesim
+ -- Utilidade : ver Como nodes e topicos se comunicam entre sí , por exemplo o turtlesim comunica com o teleop_turtle
+
+ Como ver os tópicos que estão em execução no sistema?
+-- ros2 topic list
+Lista mais detalhado dos topicos 
+        Esses atributos servem para que as "nodes" saibam com quem elas estão "conversando" sobre a mesma informação e mover elas pelo topico 
+-- ros2 topic list -t
+
+Para ver topicos alem do que estão , desabilite todas as caixinhas depois do hidden 
+
+
+
+Para saber a informação que está passando por cada tópico 
+-- ros2 topic echo  nome_do_topico
+Exemplo : ros2 topic echo /turtle1/cmd_vel
+ ATENÇÂO : esse comando não revelará nada pois ele está aguardando alguma informação passar por ele, por exemplo o teleop_turtle,
+ caso vc mexa a tartaruga, irá aparecer as informações que passaram atravéz do tópico ( por exempĺo, coordenadas ). 
+
+  // Para ver onde o echo opera, vá no rqt_graph e desmarque a caixa DEBUG no hidden ... tal que irá aparecer o "rqt_gui_py_node_(numero)"
+  Portanto o "Publisher" ( o que envia o comando , nesse caso o teleop_turtle) está enviando informações que passam pelo topico cmd_vel, tal que 
+  2 "subscribers" ( quem recebe as informações/ quem esta "inscrito " para receber as informações ) recebem as informações 
+
+
+  Como saber quantos publishers e subscriber tem em um topico 
+
+  -- ros2 topic info /nome/cmd_vel
+
+
+Tendo a estrutura da mensagem, é possivel mandar 'data' para um tópico diretamente usando o prompt de comando 
+-- ros2 topic pub nome_do_topico msg_type 'args'
+'args' seria a 'data' que vc vai passar para os tópicos nas estruturas descobertas anteriormente 
+É importante saber que os argumentos prescisam  seguir  a YAML syntax (Consiste em uma sentença que começa com - , e em que cada item da lista
+é um 'key-value pair', representando uma hash ou dicionario  ) ( em outras palavras, é uma lista , por exemplo : Casa : -porta -armario -cozinha....)
+Exemplo :
+-- 
+
+                --once é OPCIONAL, talque sua função é enviar somente uma mensagem e sair 
+
+Nesse exemplo será observado no prompt : 
+publisher: beginning loop
+publishing #1: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=1.8))
+
+
+
+        Robôs que pretende, andar por tempo indeterminado ou, nesse caso , a tartaruga mover-se indeterminantemente , requerse um comando previo
+para que ele continue operando 
+Deve-se usar o comando '--rate X ', tal que X vai ser o numero de 'repetções'
+
+
+        Voltando ao rqt_graph , é possivel visualizar o que está acontecendo graficamente , atravez do ros2 topic puc...
+        em que ele : node (/_ros2cli_30358) is publishing over the /turtle1/cmd_vel topic, which is being received by both the ros2 topic echo ... 
+        node (/_ros2cli_26646) and the /turtlesim node now.
+
+        Com o comando 'ros2 topic echo /nome_do_topico/pose' é possivel visualizar o que está passando pelo tópico pose e sendo entregado para
+        os subscriber, tal que a mensagem já está alinhada com a "linguagem" do receiver
+
+        Exemplo : O comando Pub envia mensagens do tipo "vector" e o comando pose demonstra a mensagem no subscriber jpa traduzida ( nesse caso seria 
+        linear,angular)
+
+                O comando Pub tem 2 metodos para preencher a lacuna de tempo(timestamp) . Nos comando do tipo ( std_msgs/msg/Header), pode-se preencher com 'auto'
+        para preencher o campo . 
+                        1 - ros2 topic pub /pose geometry_msgs/msg/PoseStamped '{header: "auto", pose: {position: {x: 1.0, y: 2.0, z: 3.0}}}'
+
+                Para comando de mensagem do tipo (builtin_interfaces/msg/Time) usa-se 'now'
+                        2-  ros2 topic pub /reference sensor_msgs/msg/TimeReference '{header: "auto", time_ref: "now", source: "dumy"}'
+
+
+                HZ 
+
+                        Como ver o 'rate' que a informação / data está sendo published 
+                -- ros2 topic hz /nome_do_topico/pose 
+                OU 
+                -- ros2 topic hz /nome_do_topico/cmd_vel
+                        Como mudar 'rate' operante?
+                -- ros2 topic pub --rate (num)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+ax = acumulkador -- > utilizado como acumulador em operações aritimeticas
+bx = base -- > usado como registrador de base para referemcoar posições de memoria 
+cx = contador --> utilizado em operações iterativas e repetitivas para contar coisas , podendo ser incrementado ou decrementado 
+dx = dados --> utilizado em operações de multiplicação para armazenar parde de um produto de 32 bits, ou de operações de divisão ( servindo para armazenar o resto)
+
+
+ip = intruction pointer --> utilizado em um conjunto com CS para localizar a posição, dentro do segmento de código corrente, da próxima intrução a ser executada 
+(ele é automaticamente incrementado)
+
+si e dl = source/destination index --> usado como registrador de índice em alguns modos de endereçamento indireto, em conjunto com DS;
+(SI e DL facilitam a movimentação de dados sequenciados entre posições fonte ( indicado por SI ) e posições destino ( indicado por DL))
+

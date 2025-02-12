@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+
+</head>
+
+<style>
+    body {
+        background: linear-gradient(to bottom, #007bff, #ffffff);
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        background-color: #007bff;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        font-size: 33px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    h1 {
+        color: #ffffff;
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 15px 30px;
+        margin: 0 auto;
+        width: 200px;
+        font-size: 18px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<body>
+    <header> Publicher</header>
+
+    <div class="container">
+        <a href="http://localhost:3000/upload" class="button">Ir para Upload</a>
+        <a href="http://localhost:3000/about" class="button">About</a>
+    </div>
+
+</body>
+
+</html>

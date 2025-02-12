@@ -1,0 +1,24 @@
+tExecutar o programa 
+ -- ros2 run turtlesim turlesim_node
+Comando para mexer a tartaruga 
+-- ros2 run turlesim turtle_teleop_key 
+
+Abrir prompt para criar varias tartarugas ( turtlesim tem que já estar aberto)
+ --  Digitar no prompt  :  rqt
+    -- Navegar em Plugins > Services > Service Caller 
+      -- Service > spawm 
+          -- Dá pra editar o nome da tartaruga, a posição X e Y de cada uma 
+
+Como controlar a 'N' tartaruga q vc criou?
+ -- Abra outro prompt de comando 
+    -- Pressione CTRL+O , e digite
+
+    
+-- ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel
+
+Como fechar simulação/controles?
+-- Aperte CTRL+C
+
+////////////////////////
+
+  
