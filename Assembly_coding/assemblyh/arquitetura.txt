@@ -1,6 +1,6 @@
 
 
-   CPU - unidade de processamento 
+   CPU - unidade de processamento  
  {
 UC - Unidade de controle 
 ULA - Unidade Logica e Aritmética 
