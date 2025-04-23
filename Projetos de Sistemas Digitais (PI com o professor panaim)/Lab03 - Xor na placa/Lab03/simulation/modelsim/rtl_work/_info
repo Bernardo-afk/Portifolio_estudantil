@@ -1,0 +1,89 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/snow/Documents/projetos quartus/Lab03/simulation/modelsim
+Elab03
+Z1 w1741655620
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/snow/Documents/projetos quartus/Lab03/lab03.vhd
+Z5 FC:/Users/snow/Documents/projetos quartus/Lab03/lab03.vhd
+l0
+L4
+VWBI36ZSOJ7JZW3M=Xc[bX0
+!s100 4AV_CTkn2NZi13]8_UT7J2
+Z6 OV;C;10.5b;63
+33
+Z7 !s110 1741655928
+!i10b 1
+Z8 !s108 1741655928.000000
+Z9 !s90 -reportprogress|300|-2008|-work|work|C:/Users/snow/Documents/projetos quartus/Lab03/lab03.vhd|
+Z10 !s107 C:/Users/snow/Documents/projetos quartus/Lab03/lab03.vhd|
+!i113 1
+Z11 o-2008 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abhv
+R2
+R3
+Z13 DEx4 work 5 lab03 0 22 WBI36ZSOJ7JZW3M=Xc[bX0
+l12
+L11
+Vj<iPHk:<_kdRlI9kA_7jo2
+!s100 [89EPgohf>2nH4L^RS]_]0
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Elab03_tb
+Z14 w1741655274
+R2
+R3
+R0
+Z15 8C:/Users/snow/Documents/projetos quartus/Lab03/lab03_td.vhd
+Z16 FC:/Users/snow/Documents/projetos quartus/Lab03/lab03_td.vhd
+l0
+L5
+Vj`n:lgh1ZV6Y9KHmL:eEA2
+!s100 SWBRCfN1HCYldclPB2UmL1
+R6
+33
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-2008|-work|work|C:/Users/snow/Documents/projetos quartus/Lab03/lab03_td.vhd|
+Z18 !s107 C:/Users/snow/Documents/projetos quartus/Lab03/lab03_td.vhd|
+!i113 1
+R11
+R12
+Atb
+R13
+R2
+R3
+DEx4 work 8 lab03_tb 0 22 j`n:lgh1ZV6Y9KHmL:eEA2
+l11
+L8
+V:LOOCNbOPZlKQz4V1AM]i0
+!s100 S;OZ`L1986NizUW]D080`0
+R6
+33
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
