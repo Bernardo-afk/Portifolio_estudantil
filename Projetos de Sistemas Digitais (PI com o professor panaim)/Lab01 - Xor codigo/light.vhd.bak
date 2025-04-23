@@ -12,4 +12,4 @@ port(
 	BEGIN
 		f <= (x1 AND NOT x2) OR (NOT x1 AND x2);
 		END LogicFunction;
-		//
+		
