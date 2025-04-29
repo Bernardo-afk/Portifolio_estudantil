@@ -868,4 +868,12 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
 set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name VHDL_FILE display7.vhd
 set_global_assignment -name VHDL_FILE alu_pkg.vhd
+set_global_assignment -name VHDL_FILE components_pkg.vhd
+set_global_assignment -name VHDL_FILE full_adder.vhd
+set_global_assignment -name VHDL_FILE somador.vhd
+set_global_assignment -name VHDL_FILE mult2bits.vhd
+set_global_assignment -name VHDL_FILE comparador.vhd
+set_global_assignment -name VHDL_FILE aluPredefinido.vhd
+set_global_assignment -name VHDL_FILE principal.vhd
