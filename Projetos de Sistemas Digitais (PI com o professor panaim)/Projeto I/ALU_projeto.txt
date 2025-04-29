@@ -1,0 +1,23 @@
+a - SW10 SW9 SW8 SW7
+b - SW6 SW5 Sw4 SW3
+
+
+ AluOp - SW2 SW1 SW0
+
+HEX0 - AluOp
+HEX1 - b
+HEX2 - a
+HEX4 - result
+
+ LDR0 - cout
+ LDR1 - zero
+ LDR2 - overflow
+
+ -- comparador
+  LDR3 - Equ   IGUAL
+  LDR4 -Grt     Maior q o outro 
+ LDR5 - Lst       menor que o outro 
+
+
+
+
