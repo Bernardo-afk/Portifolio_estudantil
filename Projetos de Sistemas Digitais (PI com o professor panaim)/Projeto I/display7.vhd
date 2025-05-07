@@ -21,6 +21,12 @@ package body display7 is
             when "0111" => return "1111000"; -- 7
             when "1000" => return "0000000"; -- 8
             when "1001" => return "0010000"; -- 9
+				when "1010" => return "0001000"; --10 (A)
+				when "1011" => return "1110000"; --11 (B)
+				when "1100" => return ""; --12 (C)
+				
+				
+				
             when others => return "1111111"; -- tudo apagado
         end case;
     end;

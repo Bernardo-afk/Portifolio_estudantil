@@ -1,0 +1,901 @@
+Analysis & Synthesis report for Projeto1
+Tue May 06 17:01:52 2025
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for Inferred Entity Instance: aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0
+ 11. lpm_mult Parameter Settings by Entity Instance
+ 12. Port Connectivity Checks: "aluPredefinido:ULA0|somador:SUB_U"
+ 13. Port Connectivity Checks: "aluPredefinido:ULA0|somador:ADD_U"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue May 06 17:01:52 2025       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Projeto1                                    ;
+; Top-level Entity Name              ; principal                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 74                                          ;
+;     Total combinational functions  ; 74                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 85                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; principal          ; Projeto1           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                          ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; display7.vhd                     ; yes             ; User VHDL File  ; D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/display7.vhd       ;         ;
+; components_pkg.vhd               ; yes             ; User VHDL File  ; D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/components_pkg.vhd ;         ;
+; full_adder.vhd                   ; yes             ; User VHDL File  ; D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd     ;         ;
+; somador.vhd                      ; yes             ; User VHDL File  ; D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador.vhd        ;         ;
+; mult2bits.vhd                    ; yes             ; User VHDL File  ; D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd      ;         ;
+; comparador.vhd                   ; yes             ; User VHDL File  ; D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd     ;         ;
+; aluPredefinido.vhd               ; yes             ; User VHDL File  ; D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd ;         ;
+; principal.vhd                    ; yes             ; User VHDL File  ; D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd      ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                                   ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                                                                 ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                ;         ;
+; multcore.inc                     ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.inc                                                                   ;         ;
+; bypassff.inc                     ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/bypassff.inc                                                                   ;         ;
+; altshift.inc                     ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.inc                                                                   ;         ;
+; multcore.tdf                     ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/multcore.tdf                                                                   ;         ;
+; csa_add.inc                      ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/csa_add.inc                                                                    ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mpar_add.inc                                                                   ;         ;
+; muleabz.inc                      ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/muleabz.inc                                                                    ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mul_lfrg.inc                                                                   ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/mul_boothc.inc                                                                 ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                               ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                                             ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dffpipe.inc                                                                    ;         ;
+; altshift.tdf                     ; yes             ; Megafunction    ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.tdf                                                                   ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 74          ;
+;                                             ;             ;
+; Total combinational functions               ; 74          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 50          ;
+;     -- 3 input functions                    ; 22          ;
+;     -- <=2 input functions                  ; 2           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 74          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 85          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; SW[0]~input ;
+; Maximum fan-out                             ; 18          ;
+; Total fan-out                               ; 389         ;
+; Average fan-out                             ; 1.59        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                               ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Entity Name    ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+----------------+--------------+
+; |principal                          ; 74 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 85   ; 0            ; |principal                                                                       ; principal      ; work         ;
+;    |aluPredefinido:ULA0|            ; 46 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0                                                   ; aluPredefinido ; work         ;
+;       |comparador:CMP_U|            ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|comparador:CMP_U                                  ; comparador     ; work         ;
+;       |mult2bits:MUL_U|             ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|mult2bits:MUL_U                                   ; mult2bits      ; work         ;
+;          |lpm_mult:Mult0|           ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0                    ; lpm_mult       ; work         ;
+;             |multcore:mult_core|    ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0|multcore:mult_core ; multcore       ; work         ;
+;       |somador:ADD_U|               ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|somador:ADD_U                                     ; somador        ; work         ;
+;          |full_adder:\gen_add:1:FA| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|somador:ADD_U|full_adder:\gen_add:1:FA            ; full_adder     ; work         ;
+;          |full_adder:\gen_add:2:FA| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|somador:ADD_U|full_adder:\gen_add:2:FA            ; full_adder     ; work         ;
+;          |full_adder:\gen_add:3:FA| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|somador:ADD_U|full_adder:\gen_add:3:FA            ; full_adder     ; work         ;
+;       |somador:SUB_U|               ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|somador:SUB_U                                     ; somador        ; work         ;
+;          |full_adder:\gen_add:1:FA| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|somador:SUB_U|full_adder:\gen_add:1:FA            ; full_adder     ; work         ;
+;          |full_adder:\gen_add:2:FA| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|somador:SUB_U|full_adder:\gen_add:2:FA            ; full_adder     ; work         ;
+;          |full_adder:\gen_add:3:FA| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |principal|aluPredefinido:ULA0|somador:SUB_U|full_adder:\gen_add:3:FA            ; full_adder     ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |principal|aluPredefinido:ULA0|cout ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |principal|aluPredefinido:ULA0|Mux0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+-------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                ;
++------------------------------------------------+--------------+-------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                      ;
+; LPM_WIDTHA                                     ; 2            ; Untyped                             ;
+; LPM_WIDTHB                                     ; 2            ; Untyped                             ;
+; LPM_WIDTHP                                     ; 4            ; Untyped                             ;
+; LPM_WIDTHR                                     ; 4            ; Untyped                             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                             ;
+; LATENCY                                        ; 0            ; Untyped                             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                             ;
+; USE_EAB                                        ; OFF          ; Untyped                             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                 ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                             ;
++------------------------------------------------+--------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                             ;
++---------------------------------------+----------------------------------------------------+
+; Name                                  ; Value                                              ;
++---------------------------------------+----------------------------------------------------+
+; Number of entity instances            ; 1                                                  ;
+; Entity Instance                       ; aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 2                                                  ;
+;     -- LPM_WIDTHB                     ; 2                                                  ;
+;     -- LPM_WIDTHP                     ; 4                                                  ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                 ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                 ;
+;     -- USE_EAB                        ; OFF                                                ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                               ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                 ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                 ;
++---------------------------------------+----------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "aluPredefinido:ULA0|somador:SUB_U" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                        ;
++------+-------+----------+-------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "aluPredefinido:ULA0|somador:ADD_U" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                        ;
++------+-------+----------+-------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 85                          ;
+; cycloneiii_lcell_comb ; 79                          ;
+;     normal            ; 79                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 50                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.34                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Tue May 06 17:01:41 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto1 -c Projeto1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 0 entities, in source file display7.vhd
+    Info (12022): Found design unit 1: display7 File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/display7.vhd Line: 4
+    Info (12022): Found design unit 2: display7-body File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/display7.vhd Line: 9
+Info (12021): Found 1 design units, including 0 entities, in source file alu_pkg.vhd
+    Info (12022): Found design unit 1: alu_pkg File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/alu_pkg.vhd Line: 4
+Info (12021): Found 1 design units, including 0 entities, in source file components_pkg.vhd
+    Info (12022): Found design unit 1: components_pkg File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/components_pkg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-logica File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd Line: 9
+    Info (12023): Found entity 1: full_adder File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file somador.vhd
+    Info (12022): Found design unit 1: somador-logica File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador.vhd Line: 12
+    Info (12023): Found entity 1: somador File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mult2bits.vhd
+    Info (12022): Found design unit 1: mult2bits-logica File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd Line: 10
+    Info (12023): Found entity 1: mult2bits File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
+    Info (12022): Found design unit 1: comparador-logica File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd Line: 11
+    Info (12023): Found entity 1: comparador File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alupredefinido.vhd
+    Info (12022): Found design unit 1: aluPredefinido-logica File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd Line: 21
+    Info (12023): Found entity 1: aluPredefinido File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file principal.vhd
+    Info (12022): Found design unit 1: principal-logica File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 24
+    Info (12023): Found entity 1: principal File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 12
+Info (12127): Elaborating entity "principal" for the top level hierarchy
+Info (12128): Elaborating entity "aluPredefinido" for hierarchy "aluPredefinido:ULA0" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 41
+Info (12128): Elaborating entity "somador" for hierarchy "aluPredefinido:ULA0|somador:ADD_U" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd Line: 31
+Info (12128): Elaborating entity "full_adder" for hierarchy "aluPredefinido:ULA0|somador:ADD_U|full_adder:\gen_add:0:FA" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador.vhd Line: 18
+Info (12128): Elaborating entity "mult2bits" for hierarchy "aluPredefinido:ULA0|mult2bits:MUL_U" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd Line: 43
+Info (12128): Elaborating entity "comparador" for hierarchy "aluPredefinido:ULA0|comparador:CMP_U" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd Line: 52
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "aluPredefinido:ULA0|mult2bits:MUL_U|Mult0" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd Line: 12
+Info (12130): Elaborated megafunction instantiation "aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd Line: 12
+Info (12133): Instantiated megafunction "aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0" with the following parameter: File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd Line: 12
+    Info (12134): Parameter "LPM_WIDTHA" = "2"
+    Info (12134): Parameter "LPM_WIDTHB" = "2"
+    Info (12134): Parameter "LPM_WIDTHP" = "4"
+    Info (12134): Parameter "LPM_WIDTHR" = "4"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 323
+Info (12131): Elaborated megafunction instantiation "aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "aluPredefinido:ULA0|mult2bits:MUL_U|lpm_mult:Mult0" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 18
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 19
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX7[0]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX7[1]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX7[2]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX7[4]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX7[5]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd Line: 20
+Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored 407 assignments for entity "DE2_115" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCLRCK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_BCLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_DACDAT -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_DACLRCK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_XCK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50 -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50 -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQM[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQM[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQM[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQM[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[16] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[17] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[18] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[19] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[20] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[21] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[22] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[23] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[24] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[25] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[26] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[27] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[28] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[29] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[30] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[31] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EEP_I2C_SCLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EEP_I2C_SDAT -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_GTX_CLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_INT_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ENET0_LINK100 -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_MDC -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_MDIO -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RST_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_CLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_COL -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_CRS -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_DATA[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_DATA[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_DATA[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_DATA[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_DV -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_RX_ER -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_CLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_DATA[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_DATA[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_DATA[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_DATA[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_EN -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET0_TX_ER -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_GTX_CLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_INT_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ENET1_LINK100 -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_MDC -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_MDIO -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_RST_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_RX_CLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_RX_COL -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_RX_CRS -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_RX_DATA[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_RX_DATA[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_RX_DATA[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_RX_DATA[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_RX_DV -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_RX_ER -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_TX_CLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_TX_DATA[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_TX_DATA[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_TX_DATA[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_TX_DATA[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_TX_EN -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to ENET1_TX_ER -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ENETCLK_25 -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EX_IO[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EX_IO[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EX_IO[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EX_IO[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EX_IO[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EX_IO[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to EX_IO[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[10] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[11] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[12] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[13] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[14] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[15] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[16] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[17] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[18] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[19] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[20] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[21] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[22] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[8] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_ADDR[9] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_CE_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_DQ[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_DQ[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_DQ[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_DQ[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_DQ[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_DQ[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_DQ[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_DQ[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_OE_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_RST_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_RY -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_WE_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FL_WP_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX0[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX0[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to HEX0[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX6[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX6[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX6[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX6[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX6[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX6[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX6[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX7[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX7[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX7[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX7[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX7[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX7[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX7[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to I2C_SCLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to I2C_SDAT -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to IRDA_RXD -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_BLON -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_EN -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_ON -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_RS -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_RW -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[8] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[10] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[11] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[12] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[13] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[14] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[15] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[16] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[17] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[8] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDR[9] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_ADDR[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_ADDR[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_CS_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DACK_N[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DACK_N[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[10] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[11] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[12] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[13] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[14] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[15] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[8] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DATA[9] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DREQ[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_DREQ[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_FSPEED -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_INT[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_INT[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_LSPEED -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_RD_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_RST_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OTG_WE_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK2 -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT2 -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_CLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_CMD -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_DAT[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_DAT[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_DAT[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_DAT[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_WP_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SMA_CLKIN -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SMA_CLKOUT -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[10] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[11] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[12] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[13] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[14] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[15] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[16] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[17] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[18] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[19] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[8] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[9] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_CE_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[10] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[11] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[12] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[13] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[14] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[15] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[8] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[9] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_LB_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_OE_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_UB_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_WE_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[10] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[11] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[12] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[13] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[14] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[15] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[16] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[17] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_CLK27 -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_HS -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_RESET_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_VS -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_CTS -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RTS -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RXD -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_TXD -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_BLANK_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_CLK -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[0] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[4] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[5] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[6] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[7] -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_SYNC_N -entity DE2_115 was ignored
+    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE2_115 was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 159 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 74 output pins
+    Info (21061): Implemented 74 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 450 warnings
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Tue May 06 17:01:52 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:23
+
+

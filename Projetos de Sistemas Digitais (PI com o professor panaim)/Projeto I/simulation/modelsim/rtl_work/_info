@@ -1,0 +1,321 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/simulation/modelsim
+Ealupredefinido
+Z1 w1746019247
+Z2 DPx4 work 14 components_pkg 0 22 ;4SYmRFY^7LgYFiBHfFPj3
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd
+Z7 FD:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd
+l0
+L6
+VS4;HPhR7X0ih^W[LS?S?Z0
+!s100 eeI`Mzc=P^`Z>J6g^:Mgn3
+Z8 OV;C;10.5b;63
+33
+Z9 !s110 1746019376
+!i10b 1
+Z10 !s108 1746019376.000000
+Z11 !s90 -reportprogress|300|-2008|-work|work|D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd|
+Z12 !s107 D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd|
+!i113 1
+Z13 o-2008 -work work
+Z14 tExplicit 1 CvgOpt 0
+Alogica
+R2
+R3
+R4
+R5
+Z15 DEx4 work 14 alupredefinido 0 22 S4;HPhR7X0ih^W[LS?S?Z0
+l18
+L14
+Vg[D1P44M5:m?>I:<XG]<O0
+!s100 i[l;oNI4f?E8QV_RK4S_b1
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ecomparador
+Z16 w1745966364
+R3
+R4
+R5
+R0
+Z17 8D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd
+Z18 FD:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd
+l0
+L5
+V5C;iXiVYXf9]h[]>]Uja[0
+!s100 BZX@9^^_IHXn<S1R;5:`Z0
+R8
+33
+R9
+!i10b 1
+R10
+Z19 !s90 -reportprogress|300|-2008|-work|work|D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd|
+Z20 !s107 D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd|
+!i113 1
+R13
+R14
+Alogica
+R3
+R4
+R5
+DEx4 work 10 comparador 0 22 5C;iXiVYXf9]h[]>]Uja[0
+l12
+L11
+Vjo4EO2?J_;H=Q501Nc0[k3
+!s100 h2WU48DilbfIQ?WTD?hGU1
+R8
+33
+R9
+!i10b 1
+R10
+R19
+R20
+!i113 1
+R13
+R14
+Pcomponents_pkg
+R4
+R5
+w1745966315
+R0
+8D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/components_pkg.vhd
+FD:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/components_pkg.vhd
+l0
+L4
+V;4SYmRFY^7LgYFiBHfFPj3
+!s100 HY4WPDT8UYFm[h7SW]5Z[3
+R8
+33
+Z21 !s110 1746019375
+!i10b 1
+Z22 !s108 1746019375.000000
+!s90 -reportprogress|300|-2008|-work|work|D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/components_pkg.vhd|
+!s107 D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/components_pkg.vhd|
+!i113 1
+R13
+R14
+Pdisplay7
+R4
+R5
+Z23 w1745964857
+R0
+Z24 8D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/display7.vhd
+Z25 FD:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/display7.vhd
+l0
+L4
+V5RIBSUof07n898M>=n4BW0
+!s100 GbUa;5dJLT2ik^[9M6E2H1
+R8
+33
+b1
+R21
+!i10b 1
+R22
+Z26 !s90 -reportprogress|300|-2008|-work|work|D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/display7.vhd|
+Z27 !s107 D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/display7.vhd|
+!i113 1
+R13
+R14
+Bbody
+Z28 DPx4 work 8 display7 0 22 5RIBSUof07n898M>=n4BW0
+R4
+R5
+l0
+L9
+VE;M>n98hgNGoGe`8IGNPl0
+!s100 a4Ggn`5jCIQz^fdlhXY:11
+R8
+33
+R21
+!i10b 1
+R22
+R26
+R27
+!i113 1
+R13
+R14
+Efull_adder
+Z29 w1745966344
+R4
+R5
+R0
+Z30 8D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd
+Z31 FD:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd
+l0
+L4
+VU8NhLFoeFbgEJIzhb`Cb71
+!s100 cDE^XLP>PaW3K_[BPVMLI3
+R8
+33
+R9
+!i10b 1
+R10
+Z32 !s90 -reportprogress|300|-2008|-work|work|D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd|
+Z33 !s107 D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd|
+!i113 1
+R13
+R14
+Alogica
+R4
+R5
+DEx4 work 10 full_adder 0 22 U8NhLFoeFbgEJIzhb`Cb71
+l10
+L9
+V:TOZ1BPHU=b;@>6IM;^EB0
+!s100 iiB2Egz`AjT4k8WMkIhf63
+R8
+33
+R9
+!i10b 1
+R10
+R32
+R33
+!i113 1
+R13
+R14
+Emult2bits
+Z34 w1745966350
+R3
+R4
+R5
+R0
+Z35 8D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd
+Z36 FD:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd
+l0
+L5
+VKo]QkUCK?_hM8QbK2[QKW1
+!s100 H8c=o@dJP;3W4mcL0T3W31
+R8
+33
+R9
+!i10b 1
+R10
+Z37 !s90 -reportprogress|300|-2008|-work|work|D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd|
+Z38 !s107 D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd|
+!i113 1
+R13
+R14
+Alogica
+R3
+R4
+R5
+DEx4 work 9 mult2bits 0 22 Ko]QkUCK?_hM8QbK2[QKW1
+l11
+L10
+VZT[MB9Y]JZ_@:QTA2g]:_0
+!s100 a0LB@lIf3:WLkAhWB_Jeo1
+R8
+33
+R9
+!i10b 1
+R10
+R37
+R38
+!i113 1
+R13
+R14
+Eprincipal
+Z39 w1746016388
+R28
+R2
+R4
+R5
+R0
+Z40 8D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd
+Z41 FD:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd
+l0
+L10
+V=ITDZdDCmZ6D]3QPDU`ZO3
+!s100 U>EL:;K_GaIgZTeVCM7jC1
+R8
+33
+R9
+!i10b 1
+R10
+Z42 !s90 -reportprogress|300|-2008|-work|work|D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd|
+Z43 !s107 D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd|
+!i113 1
+R13
+R14
+Alogica
+R3
+R15
+R28
+R2
+R4
+R5
+DEx4 work 9 principal 0 22 =ITDZdDCmZ6D]3QPDU`ZO3
+l28
+L22
+V?4DK3o^8P>Z<_Q>UeAzVf2
+!s100 _7a:?:PPE=S9hI^kkHTml1
+R8
+33
+R9
+!i10b 1
+R10
+R42
+R43
+!i113 1
+R13
+R14
+Esomador
+Z44 w1746019357
+R2
+R4
+R5
+R0
+Z45 8D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador.vhd
+Z46 FD:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador.vhd
+l0
+L5
+VZaDMO?lL319RnC^F^=^]h2
+!s100 7mo6TE6`^g@7aJEW8hoEQ3
+R8
+33
+R9
+!i10b 1
+R10
+Z47 !s90 -reportprogress|300|-2008|-work|work|D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador.vhd|
+Z48 !s107 D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador.vhd|
+!i113 1
+R13
+R14
+Alogica
+R2
+R4
+R5
+DEx4 work 7 somador 0 22 ZaDMO?lL319RnC^F^=^]h2
+l14
+L12
+Vk:QMQU88odeZmRJ8J`B]K3
+!s100 8SWgz;NnSzX@l:3H5:S]63
+R8
+33
+R9
+!i10b 1
+R10
+R47
+R48
+!i113 1
+R13
+R14

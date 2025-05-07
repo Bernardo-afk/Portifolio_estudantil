@@ -3,6 +3,9 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.components_pkg.all;
 
+
+-- Define as entradas e saidas
+
 entity aluPredefinido is
     port ( a, b   : in  std_logic_vector(3 downto 0);
            AluOp  : in  std_logic_vector(2 downto 0);
@@ -11,19 +14,46 @@ entity aluPredefinido is
            equ, grt, lst : out std_logic );
 end;
 
+
+
+
+
 architecture logica of aluPredefinido is
+
     signal sum4, sub4 : std_logic_vector(3 downto 0);
     signal sum_cout, sum_ovf, sub_cout, sub_ovf : std_logic;
     signal prod2 : std_logic_vector(3 downto 0);
+	 
 begin
-    -- Soma e sub
+    -- Soma ( A partir do Componente Somador, dentro do pkg Components_pkg) ele pega
+	 -- 			o port map de entradas e saidas ( tal que a soma inicia com carry in 0 ) 
+	 
     ADD_U : somador   port map ( a,     b,      '0', sum4, sum_cout, sum_ovf );
-    SUB_U : somador   port map ( a, not b,      '1', sub4, sub_cout, sub_ovf );
-    -- Mult
-    MUL_U : mult2bits port map ( a(1 downto 0), b(1 downto 0), prod2 );
-    -- Comparador
+	 
+	 --Sub( A partir do Componente Somador ( dei esse nome para ficar mais facil), dentro do pkg Components_pkg) ele pega
+	 -- 			o port map de entradas e saidas ( tal que a subtração inicia com carry in 1 )
+	 
+    SUB_U : somador   port map ( a,  b,      '1', sub4, sub_cout, sub_ovf );
+    
+	 
+	 
+	 -- Mult   ( A partir do Componente Mullt2bits, dentro do pkg Components_pkg ) 
+				-- ele pega o port map das entradas e saidas , assim a , b , p 
+	 
+    MUL_U : mult2bits port map ( a(1 downto 0), b(1 downto 0), prod2 ); -- prod2 já declarado como vetor de 0 até 3
+    
+	 
+	 -- Comparador
+				-- pega o compoennte comparador no pkg de componentes
+				-- entrada sendo a,b
+				-- saida equ grt lst 
+	 
+	 
     CMP_U : comparador port map ( a, b, equ, grt, lst );
 
+	 
+	 
+	 
     -- Seleção do resultado
     with AluOp select
         result <=

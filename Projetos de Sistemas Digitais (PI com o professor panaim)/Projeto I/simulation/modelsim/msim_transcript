@@ -1,0 +1,204 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Projeto1_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/display7.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:22:55 on Apr 30,2025
+# vcom -reportprogress 300 -2008 -work work D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/display7.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package display7
+# -- Compiling package body display7
+# -- Loading package display7
+# End time: 10:22:55 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/components_pkg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:22:55 on Apr 30,2025
+# vcom -reportprogress 300 -2008 -work work D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/components_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package components_pkg
+# End time: 10:22:55 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:22:56 on Apr 30,2025
+# vcom -reportprogress 300 -2008 -work work D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder
+# -- Compiling architecture logica of full_adder
+# End time: 10:22:56 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:22:56 on Apr 30,2025
+# vcom -reportprogress 300 -2008 -work work D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/mult2bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mult2bits
+# -- Compiling architecture logica of mult2bits
+# End time: 10:22:56 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:22:56 on Apr 30,2025
+# vcom -reportprogress 300 -2008 -work work D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity comparador
+# -- Compiling architecture logica of comparador
+# End time: 10:22:56 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:22:56 on Apr 30,2025
+# vcom -reportprogress 300 -2008 -work work D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package components_pkg
+# -- Compiling entity somador
+# -- Compiling architecture logica of somador
+# End time: 10:22:56 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:22:56 on Apr 30,2025
+# vcom -reportprogress 300 -2008 -work work D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/aluPredefinido.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package components_pkg
+# -- Compiling entity aluPredefinido
+# -- Compiling architecture logica of aluPredefinido
+# End time: 10:22:56 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:22:56 on Apr 30,2025
+# vcom -reportprogress 300 -2008 -work work D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/principal.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package components_pkg
+# -- Loading package display7
+# -- Compiling entity principal
+# -- Compiling architecture logica of principal
+# -- Loading package NUMERIC_STD
+# -- Loading entity aluPredefinido
+# End time: 10:22:56 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.alupredefinido
+# vsim work.alupredefinido 
+# Start time: 10:23:05 on Apr 30,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.components_pkg
+# Loading work.alupredefinido(logica)
+# Loading work.somador(logica)
+# Loading work.full_adder(logica)
+# Loading work.mult2bits(logica)
+# Loading work.comparador(logica)
+add wave -position end  sim:/alupredefinido/AluOp
+force -freeze sim:/alupredefinido/AluOp 100 0
+force -freeze sim:/alupredefinido/AluOp 100 0
+add wave -position end  sim:/alupredefinido/a
+add wave -position end  sim:/alupredefinido/b
+add wave -position end  sim:/alupredefinido/result
+force -freeze sim:/alupredefinido/a 0101 0
+force -freeze sim:/alupredefinido/b 0001 0
+run
+restart
+wave create -driver freeze -pattern counter -startvalue 0000 -endvalue 1111 -type Range -direction Up -period 50ps -step 1 -repeat 1 -range 3 0 -starttime 0ps -endtime 1000ps sim:/alupredefinido/a
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern counter -startvalue 0000 -endvalue 1111 -type Range -direction Up -period 50ps -step 1 -repeat 1 -range 3 0 -starttime 0ps -endtime 1000ps sim:/alupredefinido/b
+add wave -position end  sim:/alupredefinido/result
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# WARNING: No extended dataflow license exists
+# Error - UndoAdd called without an UndoStart
+force -freeze sim:/alupredefinido/AluOp 100 0
+restart
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+restart
+wave create -driver expectedOutput -pattern counter -startvalue 0000 -endvalue 1111 -type Range -direction Up -period 50ps -step 1 -repeat 1 -range 3 0 -starttime 0ps -endtime 1000ps sim:/alupredefinido/result
+restart
+add wave -position end  sim:/alupredefinido/result
+force -freeze sim:/alupredefinido/AluOp 100 0
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+run
+run
+run
+restart
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+restart
+force -freeze sim:/alupredefinido/AluOp 100 0
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+restart
+force -freeze sim:/alupredefinido/AluOp 101 0
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+force -freeze sim:/alupredefinido/result(0) 09 0
+# ** Error: (vsim-4026) Value "09" does not represent a literal of the enumeration type.
+# ** Error: (vsim-4011) Invalid force value: 09 0.
+# 
+noforce sim:/alupredefinido/result(0)
+force -freeze sim:/alupredefinido/result(0) 0 0
+noforce sim:/alupredefinido/result(0)
+run -all
+run
+restart
+force -freeze sim:/alupredefinido/result(0) 0 0
+force -freeze sim:/alupredefinido/AluOp 101 0
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+force -freeze sim:/alupredefinido/AluOp 110 0
+run
+restart
+force -freeze sim:/alupredefinido/AluOp 110 0
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# End time: 10:36:57 on Apr 30,2025, Elapsed time: 0:13:52
+# Errors: 1, Warnings: 1

@@ -25,7 +25,7 @@ package components_pkg is
     -- Comparador 4 bits
     component comparador
         port ( a, b        : in  std_logic_vector(3 downto 0);
-               equ, grt,
-               lst         : out std_logic );
+               equ, 
+					grt,lst         : out std_logic );
     end component;
 end package;

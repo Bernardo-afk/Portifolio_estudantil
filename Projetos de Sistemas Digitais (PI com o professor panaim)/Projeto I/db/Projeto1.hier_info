@@ -1,0 +1,433 @@
+|principal
+SW[0] => Mux0.IN19
+SW[0] => Mux1.IN19
+SW[0] => Mux2.IN19
+SW[0] => Mux3.IN19
+SW[0] => Mux4.IN19
+SW[0] => Mux5.IN19
+SW[0] => Mux6.IN19
+SW[0] => alupredefinido:ULA0.AluOp[0]
+SW[1] => Mux0.IN18
+SW[1] => Mux1.IN18
+SW[1] => Mux2.IN18
+SW[1] => Mux3.IN18
+SW[1] => Mux4.IN18
+SW[1] => Mux5.IN18
+SW[1] => Mux6.IN18
+SW[1] => alupredefinido:ULA0.AluOp[1]
+SW[2] => Mux0.IN17
+SW[2] => Mux1.IN17
+SW[2] => Mux2.IN17
+SW[2] => Mux3.IN17
+SW[2] => Mux4.IN17
+SW[2] => Mux5.IN17
+SW[2] => Mux6.IN17
+SW[2] => alupredefinido:ULA0.AluOp[2]
+SW[3] => Mux7.IN19
+SW[3] => Mux8.IN19
+SW[3] => Mux9.IN19
+SW[3] => Mux10.IN19
+SW[3] => Mux11.IN19
+SW[3] => Mux12.IN19
+SW[3] => Mux13.IN19
+SW[3] => alupredefinido:ULA0.b[0]
+SW[4] => Mux7.IN18
+SW[4] => Mux8.IN18
+SW[4] => Mux9.IN18
+SW[4] => Mux10.IN18
+SW[4] => Mux11.IN18
+SW[4] => Mux12.IN18
+SW[4] => Mux13.IN18
+SW[4] => alupredefinido:ULA0.b[1]
+SW[5] => Mux7.IN17
+SW[5] => Mux8.IN17
+SW[5] => Mux9.IN17
+SW[5] => Mux10.IN17
+SW[5] => Mux11.IN17
+SW[5] => Mux12.IN17
+SW[5] => Mux13.IN17
+SW[5] => alupredefinido:ULA0.b[2]
+SW[6] => Mux7.IN16
+SW[6] => Mux8.IN16
+SW[6] => Mux9.IN16
+SW[6] => Mux10.IN16
+SW[6] => Mux11.IN16
+SW[6] => Mux12.IN16
+SW[6] => Mux13.IN16
+SW[6] => alupredefinido:ULA0.b[3]
+SW[7] => Mux14.IN19
+SW[7] => Mux15.IN19
+SW[7] => Mux16.IN19
+SW[7] => Mux17.IN19
+SW[7] => Mux18.IN19
+SW[7] => Mux19.IN19
+SW[7] => Mux20.IN19
+SW[7] => alupredefinido:ULA0.a[0]
+SW[8] => Mux14.IN18
+SW[8] => Mux15.IN18
+SW[8] => Mux16.IN18
+SW[8] => Mux17.IN18
+SW[8] => Mux18.IN18
+SW[8] => Mux19.IN18
+SW[8] => Mux20.IN18
+SW[8] => alupredefinido:ULA0.a[1]
+SW[9] => Mux14.IN17
+SW[9] => Mux15.IN17
+SW[9] => Mux16.IN17
+SW[9] => Mux17.IN17
+SW[9] => Mux18.IN17
+SW[9] => Mux19.IN17
+SW[9] => Mux20.IN17
+SW[9] => alupredefinido:ULA0.a[2]
+SW[10] => Mux14.IN16
+SW[10] => Mux15.IN16
+SW[10] => Mux16.IN16
+SW[10] => Mux17.IN16
+SW[10] => Mux18.IN16
+SW[10] => Mux19.IN16
+SW[10] => Mux20.IN16
+SW[10] => alupredefinido:ULA0.a[3]
+LEDR[0] <= alupredefinido:ULA0.cout
+LEDR[1] <= alupredefinido:ULA0.zero
+LEDR[2] <= alupredefinido:ULA0.ovf
+LEDR[3] <= alupredefinido:ULA0.equ
+LEDR[4] <= alupredefinido:ULA0.grt
+LEDR[5] <= alupredefinido:ULA0.lst
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+LEDR[10] <= <GND>
+LEDR[11] <= <GND>
+LEDR[12] <= <GND>
+LEDR[13] <= <GND>
+LEDR[14] <= <GND>
+LEDR[15] <= <GND>
+LEDR[16] <= <GND>
+LEDR[17] <= <GND>
+HEX0[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] <= <VCC>
+HEX1[1] <= <VCC>
+HEX1[2] <= <VCC>
+HEX1[3] <= <VCC>
+HEX1[4] <= <VCC>
+HEX1[5] <= <VCC>
+HEX1[6] <= <VCC>
+HEX2[0] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[1] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[2] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[4] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[5] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[0] <= <VCC>
+HEX3[1] <= <VCC>
+HEX3[2] <= <VCC>
+HEX3[3] <= <VCC>
+HEX3[4] <= <VCC>
+HEX3[5] <= <VCC>
+HEX3[6] <= <VCC>
+HEX4[0] <= Mux20.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[1] <= Mux19.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[2] <= Mux18.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[3] <= Mux17.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[4] <= Mux16.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[5] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[6] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+HEX5[0] <= <VCC>
+HEX5[1] <= <VCC>
+HEX5[2] <= <VCC>
+HEX5[3] <= <VCC>
+HEX5[4] <= <VCC>
+HEX5[5] <= <VCC>
+HEX5[6] <= <VCC>
+HEX6[0] <= Mux27.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[1] <= Mux26.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[2] <= Mux25.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[3] <= Mux24.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[4] <= Mux23.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[5] <= Mux22.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[6] <= Mux21.DB_MAX_OUTPUT_PORT_TYPE
+HEX7[0] <= <VCC>
+HEX7[1] <= <VCC>
+HEX7[2] <= <VCC>
+HEX7[3] <= <VCC>
+HEX7[4] <= <VCC>
+HEX7[5] <= <VCC>
+HEX7[6] <= <VCC>
+
+
+|principal|aluPredefinido:ULA0
+a[0] => result.IN0
+a[0] => result.IN0
+a[0] => somador:ADD_U.a[0]
+a[0] => somador:SUB_U.a[0]
+a[0] => mult2bits:MUL_U.a[0]
+a[0] => comparador:CMP_U.a[0]
+a[1] => result.IN0
+a[1] => result.IN0
+a[1] => somador:ADD_U.a[1]
+a[1] => somador:SUB_U.a[1]
+a[1] => mult2bits:MUL_U.a[1]
+a[1] => comparador:CMP_U.a[1]
+a[2] => result.IN0
+a[2] => result.IN0
+a[2] => somador:ADD_U.a[2]
+a[2] => somador:SUB_U.a[2]
+a[2] => comparador:CMP_U.a[2]
+a[3] => result.IN0
+a[3] => result.IN0
+a[3] => somador:ADD_U.a[3]
+a[3] => somador:SUB_U.a[3]
+a[3] => comparador:CMP_U.a[3]
+b[0] => result.IN1
+b[0] => result.IN1
+b[0] => somador:ADD_U.b[0]
+b[0] => somador:SUB_U.b[0]
+b[0] => mult2bits:MUL_U.b[0]
+b[0] => comparador:CMP_U.b[0]
+b[0] => Mux3.IN4
+b[1] => result.IN1
+b[1] => result.IN1
+b[1] => somador:ADD_U.b[1]
+b[1] => somador:SUB_U.b[1]
+b[1] => mult2bits:MUL_U.b[1]
+b[1] => comparador:CMP_U.b[1]
+b[1] => Mux2.IN4
+b[2] => result.IN1
+b[2] => result.IN1
+b[2] => somador:ADD_U.b[2]
+b[2] => somador:SUB_U.b[2]
+b[2] => comparador:CMP_U.b[2]
+b[2] => Mux1.IN4
+b[3] => result.IN1
+b[3] => result.IN1
+b[3] => somador:ADD_U.b[3]
+b[3] => somador:SUB_U.b[3]
+b[3] => comparador:CMP_U.b[3]
+b[3] => Mux0.IN4
+AluOp[0] => Mux0.IN7
+AluOp[0] => Mux1.IN7
+AluOp[0] => Mux2.IN7
+AluOp[0] => Mux3.IN7
+AluOp[0] => Equal0.IN2
+AluOp[0] => Equal1.IN1
+AluOp[1] => Mux0.IN6
+AluOp[1] => Mux1.IN6
+AluOp[1] => Mux2.IN6
+AluOp[1] => Mux3.IN6
+AluOp[1] => Equal0.IN0
+AluOp[1] => Equal1.IN0
+AluOp[2] => Mux0.IN5
+AluOp[2] => Mux1.IN5
+AluOp[2] => Mux2.IN5
+AluOp[2] => Mux3.IN5
+AluOp[2] => Equal0.IN1
+AluOp[2] => Equal1.IN2
+result[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+zero <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+ovf <= ovf.DB_MAX_OUTPUT_PORT_TYPE
+equ <= comparador:CMP_U.equ
+grt <= comparador:CMP_U.grt
+lst <= comparador:CMP_U.lst
+
+
+|principal|aluPredefinido:ULA0|somador:ADD_U
+a[0] => full_adder:gen_add:0:FA.x
+a[1] => full_adder:gen_add:1:FA.x
+a[2] => full_adder:gen_add:2:FA.x
+a[3] => full_adder:gen_add:3:FA.x
+b[0] => full_adder:gen_add:0:FA.y
+b[1] => full_adder:gen_add:1:FA.y
+b[2] => full_adder:gen_add:2:FA.y
+b[3] => full_adder:gen_add:3:FA.y
+cin => full_adder:gen_add:0:FA.cin
+s[0] <= full_adder:gen_add:0:FA.s
+s[1] <= full_adder:gen_add:1:FA.s
+s[2] <= full_adder:gen_add:2:FA.s
+s[3] <= full_adder:gen_add:3:FA.s
+cout <= full_adder:gen_add:3:FA.cout
+ovf <= ovf.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|somador:ADD_U|full_adder:\gen_add:0:FA
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|somador:ADD_U|full_adder:\gen_add:1:FA
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|somador:ADD_U|full_adder:\gen_add:2:FA
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|somador:ADD_U|full_adder:\gen_add:3:FA
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|somador:SUB_U
+a[0] => full_adder:gen_add:0:FA.x
+a[1] => full_adder:gen_add:1:FA.x
+a[2] => full_adder:gen_add:2:FA.x
+a[3] => full_adder:gen_add:3:FA.x
+b[0] => full_adder:gen_add:0:FA.y
+b[1] => full_adder:gen_add:1:FA.y
+b[2] => full_adder:gen_add:2:FA.y
+b[3] => full_adder:gen_add:3:FA.y
+cin => full_adder:gen_add:0:FA.cin
+s[0] <= full_adder:gen_add:0:FA.s
+s[1] <= full_adder:gen_add:1:FA.s
+s[2] <= full_adder:gen_add:2:FA.s
+s[3] <= full_adder:gen_add:3:FA.s
+cout <= full_adder:gen_add:3:FA.cout
+ovf <= ovf.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|somador:SUB_U|full_adder:\gen_add:0:FA
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|somador:SUB_U|full_adder:\gen_add:1:FA
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|somador:SUB_U|full_adder:\gen_add:2:FA
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|somador:SUB_U|full_adder:\gen_add:3:FA
+x => s.IN0
+x => cout.IN0
+x => cout.IN0
+y => s.IN1
+y => cout.IN1
+y => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|mult2bits:MUL_U
+a[0] => Mult0.IN1
+a[1] => Mult0.IN0
+b[0] => Mult0.IN3
+b[1] => Mult0.IN2
+p[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+p[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+p[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+p[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|principal|aluPredefinido:ULA0|comparador:CMP_U
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+equ <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+grt <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+lst <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+

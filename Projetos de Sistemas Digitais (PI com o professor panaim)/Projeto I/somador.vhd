@@ -10,7 +10,7 @@ entity somador is
 end entity;
 
 architecture logica of somador is
-    signal c : std_logic_vector(4 downto 0);
+    signal c : std_logic_vector(0 to 4);
 begin
     c(0) <= cin;
 

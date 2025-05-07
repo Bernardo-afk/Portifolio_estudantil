@@ -5,9 +5,9 @@ b - SW6 SW5 Sw4 SW3
  AluOp - SW2 SW1 SW0
 
 HEX0 - AluOp
-HEX1 - b
-HEX2 - a
-HEX4 - result
+HEX2 - b
+HEX4 - a
+HEX6 - result
 
  LDR0 - cout
  LDR1 - zero
@@ -18,6 +18,16 @@ HEX4 - result
   LDR4 -Grt     Maior q o outro 
  LDR5 - Lst       menor que o outro 
 
+
+
+            (others=>'0') when "000",
+            (a and b)     when "001",
+            (a or  b)     when "010",
+            (not b)       when "011",
+            sum4          when "100",
+            sub4          when "101",
+            prod2         when "110",
+            (others=>'0') when others;
 
 
 
