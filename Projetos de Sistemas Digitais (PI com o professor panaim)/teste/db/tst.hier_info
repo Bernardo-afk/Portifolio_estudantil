@@ -1,0 +1,452 @@
+|main
+SW[0] => ula:ULA_INST.sel[0]
+SW[0] => hex7seg:HEX0_SEG.hex[1]
+SW[1] => ula:ULA_INST.sel[1]
+SW[1] => hex7seg:HEX0_SEG.hex[2]
+SW[2] => ula:ULA_INST.sel[2]
+SW[2] => hex7seg:HEX0_SEG.hex[3]
+SW[3] => ula:ULA_INST.b[0]
+SW[3] => hex7seg:HEX2_SEG.hex[0]
+SW[4] => ula:ULA_INST.b[1]
+SW[4] => hex7seg:HEX2_SEG.hex[1]
+SW[5] => ula:ULA_INST.b[2]
+SW[5] => hex7seg:HEX2_SEG.hex[2]
+SW[6] => ula:ULA_INST.b[3]
+SW[6] => hex7seg:HEX2_SEG.hex[3]
+SW[7] => ula:ULA_INST.a[0]
+SW[7] => hex7seg:HEX4_SEG.hex[0]
+SW[8] => ula:ULA_INST.a[1]
+SW[8] => hex7seg:HEX4_SEG.hex[1]
+SW[9] => ula:ULA_INST.a[2]
+SW[9] => hex7seg:HEX4_SEG.hex[2]
+SW[10] => ula:ULA_INST.a[3]
+SW[10] => hex7seg:HEX4_SEG.hex[3]
+HEX0[0] <= hex7seg:HEX0_SEG.seg[0]
+HEX0[1] <= hex7seg:HEX0_SEG.seg[1]
+HEX0[2] <= hex7seg:HEX0_SEG.seg[2]
+HEX0[3] <= hex7seg:HEX0_SEG.seg[3]
+HEX0[4] <= hex7seg:HEX0_SEG.seg[4]
+HEX0[5] <= hex7seg:HEX0_SEG.seg[5]
+HEX0[6] <= hex7seg:HEX0_SEG.seg[6]
+HEX2[0] <= hex7seg:HEX2_SEG.seg[0]
+HEX2[1] <= hex7seg:HEX2_SEG.seg[1]
+HEX2[2] <= hex7seg:HEX2_SEG.seg[2]
+HEX2[3] <= hex7seg:HEX2_SEG.seg[3]
+HEX2[4] <= hex7seg:HEX2_SEG.seg[4]
+HEX2[5] <= hex7seg:HEX2_SEG.seg[5]
+HEX2[6] <= hex7seg:HEX2_SEG.seg[6]
+HEX4[0] <= hex7seg:HEX4_SEG.seg[0]
+HEX4[1] <= hex7seg:HEX4_SEG.seg[1]
+HEX4[2] <= hex7seg:HEX4_SEG.seg[2]
+HEX4[3] <= hex7seg:HEX4_SEG.seg[3]
+HEX4[4] <= hex7seg:HEX4_SEG.seg[4]
+HEX4[5] <= hex7seg:HEX4_SEG.seg[5]
+HEX4[6] <= hex7seg:HEX4_SEG.seg[6]
+HEX6[0] <= hex7seg:HEX6_SEG.seg[0]
+HEX6[1] <= hex7seg:HEX6_SEG.seg[1]
+HEX6[2] <= hex7seg:HEX6_SEG.seg[2]
+HEX6[3] <= hex7seg:HEX6_SEG.seg[3]
+HEX6[4] <= hex7seg:HEX6_SEG.seg[4]
+HEX6[5] <= hex7seg:HEX6_SEG.seg[5]
+HEX6[6] <= hex7seg:HEX6_SEG.seg[6]
+
+
+|main|ula:ULA_INST
+a[0] => and4[0].IN0
+a[0] => or4[0].IN0
+a[0] => adder4:U_ADD4.a[0]
+a[0] => adder4:U_SUB4.a[0]
+a[0] => mult2x2:U_MUL.a[0]
+a[0] => comparator4:U_CMP.a[0]
+a[0] => Mux3.IN8
+a[1] => and4[1].IN0
+a[1] => or4[1].IN0
+a[1] => adder4:U_ADD4.a[1]
+a[1] => adder4:U_SUB4.a[1]
+a[1] => mult2x2:U_MUL.a[1]
+a[1] => comparator4:U_CMP.a[1]
+a[1] => Mux2.IN8
+a[2] => and4[2].IN0
+a[2] => or4[2].IN0
+a[2] => adder4:U_ADD4.a[2]
+a[2] => adder4:U_SUB4.a[2]
+a[2] => comparator4:U_CMP.a[2]
+a[2] => Mux1.IN8
+a[3] => and4[3].IN0
+a[3] => or4[3].IN0
+a[3] => adder4:U_ADD4.a[3]
+a[3] => adder4:U_SUB4.a[3]
+a[3] => comparator4:U_CMP.a[3]
+a[3] => Mux0.IN8
+b[0] => and4[0].IN1
+b[0] => or4[0].IN1
+b[0] => adder4:U_ADD4.b[0]
+b[0] => mult2x2:U_MUL.b[0]
+b[0] => comparator4:U_CMP.b[0]
+b[0] => adder4:U_SUB4.b[0]
+b[1] => and4[1].IN1
+b[1] => or4[1].IN1
+b[1] => adder4:U_ADD4.b[1]
+b[1] => mult2x2:U_MUL.b[1]
+b[1] => comparator4:U_CMP.b[1]
+b[1] => adder4:U_SUB4.b[1]
+b[2] => and4[2].IN1
+b[2] => or4[2].IN1
+b[2] => adder4:U_ADD4.b[2]
+b[2] => comparator4:U_CMP.b[2]
+b[2] => adder4:U_SUB4.b[2]
+b[3] => and4[3].IN1
+b[3] => or4[3].IN1
+b[3] => adder4:U_ADD4.b[3]
+b[3] => comparator4:U_CMP.b[3]
+b[3] => adder4:U_SUB4.b[3]
+sel[0] => Mux0.IN3
+sel[0] => Mux1.IN3
+sel[0] => Mux2.IN3
+sel[0] => Mux3.IN3
+sel[1] => Mux0.IN2
+sel[1] => Mux1.IN2
+sel[1] => Mux2.IN2
+sel[1] => Mux3.IN2
+sel[2] => Mux0.IN1
+sel[2] => Mux1.IN1
+sel[2] => Mux2.IN1
+sel[2] => Mux3.IN1
+res[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|ula:ULA_INST|adder4:U_ADD4
+a[0] => full_adder:FA0.a
+a[1] => full_adder:FA1.a
+a[2] => full_adder:FA2.a
+a[3] => full_adder:FA3.a
+b[0] => full_adder:FA0.b
+b[1] => full_adder:FA1.b
+b[2] => full_adder:FA2.b
+b[3] => full_adder:FA3.b
+cin => full_adder:FA0.cin
+s[0] <= full_adder:FA0.s
+s[1] <= full_adder:FA1.s
+s[2] <= full_adder:FA2.s
+s[3] <= full_adder:FA3.s
+cout <= full_adder:FA3.cout
+
+
+|main|ula:ULA_INST|adder4:U_ADD4|full_adder:FA0
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|ula:ULA_INST|adder4:U_ADD4|full_adder:FA1
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|ula:ULA_INST|adder4:U_ADD4|full_adder:FA2
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|ula:ULA_INST|adder4:U_ADD4|full_adder:FA3
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|ula:ULA_INST|adder4:U_SUB4
+a[0] => full_adder:FA0.a
+a[1] => full_adder:FA1.a
+a[2] => full_adder:FA2.a
+a[3] => full_adder:FA3.a
+b[0] => full_adder:FA0.b
+b[1] => full_adder:FA1.b
+b[2] => full_adder:FA2.b
+b[3] => full_adder:FA3.b
+cin => full_adder:FA0.cin
+s[0] <= full_adder:FA0.s
+s[1] <= full_adder:FA1.s
+s[2] <= full_adder:FA2.s
+s[3] <= full_adder:FA3.s
+cout <= full_adder:FA3.cout
+
+
+|main|ula:ULA_INST|adder4:U_SUB4|full_adder:FA0
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|ula:ULA_INST|adder4:U_SUB4|full_adder:FA1
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|ula:ULA_INST|adder4:U_SUB4|full_adder:FA2
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|ula:ULA_INST|adder4:U_SUB4|full_adder:FA3
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|ula:ULA_INST|mult2x2:U_MUL
+a[0] => Mult0.IN1
+a[1] => Mult0.IN0
+b[0] => Mult0.IN3
+b[1] => Mult0.IN2
+p[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+p[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+p[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+p[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|ula:ULA_INST|comparator4:U_CMP
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+res[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= res.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= <GND>
+
+
+|main|hex7seg:HEX4_SEG
+hex[0] => Mux0.IN19
+hex[0] => Mux1.IN19
+hex[0] => Mux2.IN19
+hex[0] => Mux3.IN19
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN18
+hex[1] => Mux1.IN18
+hex[1] => Mux2.IN18
+hex[1] => Mux3.IN18
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN17
+hex[2] => Mux1.IN17
+hex[2] => Mux2.IN17
+hex[2] => Mux3.IN17
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN16
+hex[3] => Mux1.IN16
+hex[3] => Mux2.IN16
+hex[3] => Mux3.IN16
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|hex7seg:HEX2_SEG
+hex[0] => Mux0.IN19
+hex[0] => Mux1.IN19
+hex[0] => Mux2.IN19
+hex[0] => Mux3.IN19
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN18
+hex[1] => Mux1.IN18
+hex[1] => Mux2.IN18
+hex[1] => Mux3.IN18
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN17
+hex[2] => Mux1.IN17
+hex[2] => Mux2.IN17
+hex[2] => Mux3.IN17
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN16
+hex[3] => Mux1.IN16
+hex[3] => Mux2.IN16
+hex[3] => Mux3.IN16
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|hex7seg:HEX6_SEG
+hex[0] => Mux0.IN19
+hex[0] => Mux1.IN19
+hex[0] => Mux2.IN19
+hex[0] => Mux3.IN19
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN18
+hex[1] => Mux1.IN18
+hex[1] => Mux2.IN18
+hex[1] => Mux3.IN18
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN17
+hex[2] => Mux1.IN17
+hex[2] => Mux2.IN17
+hex[2] => Mux3.IN17
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN16
+hex[3] => Mux1.IN16
+hex[3] => Mux2.IN16
+hex[3] => Mux3.IN16
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|hex7seg:HEX0_SEG
+hex[0] => Mux0.IN19
+hex[0] => Mux1.IN19
+hex[0] => Mux2.IN19
+hex[0] => Mux3.IN19
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN18
+hex[1] => Mux1.IN18
+hex[1] => Mux2.IN18
+hex[1] => Mux3.IN18
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN17
+hex[2] => Mux1.IN17
+hex[2] => Mux2.IN17
+hex[2] => Mux3.IN17
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN16
+hex[3] => Mux1.IN16
+hex[3] => Mux2.IN16
+hex[3] => Mux3.IN16
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
