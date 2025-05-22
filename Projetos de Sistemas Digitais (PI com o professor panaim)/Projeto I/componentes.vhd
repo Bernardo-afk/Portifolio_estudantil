@@ -14,24 +14,24 @@ package componentes is
         );
     end component;
 
-    -- Declaração do componente adder4 (somador de 4 bits em cascata)
-    component adder4
+    -- Declaração do componente somador_de_4bits (somador de 4 bits em cascata)
+    component somador_de_4bits
         port(
-            Cin           : in  std_logic;           -- carry in inicial
-            x3, x2, x1, x0 : in  std_logic;           -- bits de A
-            y3, y2, y1, y0 : in  std_logic;           -- bits de B
-            s3, s2, s1, s0 : out std_logic;           -- bits da soma
-            Cout          : out std_logic            -- carry out final
+            Cin           : in  std_logic;                      -- carry in inicial
+            x,y : in  std_logic_vector(3 downto 0);
+            s : out  std_logic_vector(3 downto 0);            -- bits de A, B e soma
+            Cout          : out std_logic                       -- carry out final
+            zero          : out std_logic                    -- zero
         );
     end component;
 
-    -- Declaração do componente subtractor4 (subtrator de 4 bits em complement de dois)
-    component subtractor4
+    -- Declaração do componente subtracao_de_4bits (subtrator de 4 bits em complemento de dois)
+    component subtracao_De_4bits
         port(
-            x3, x2, x1, x0 : in  std_logic;           -- bits de A
-            y3, y2, y1, y0 : in  std_logic;           -- bits de B
-            d3, d2, d1, d0 : out std_logic;           -- bits da diferença
-            Bout           : out std_logic            -- "pega um"
+            x,y : in  std_logic_vector(3 downto 0);           -- bits de A
+            d : out std_logic_vector(3 downto 0);           -- bits da diferença
+            overflow           : out std_logic           -- overflow
+            zero          : out std_logic                    -- zero
         );
     end component;
 
@@ -44,11 +44,20 @@ package componentes is
         );
     end component;
 
-	 
+
+        -- Declaração do componente comparador (comparador de 4 bits)
+	component comparador
+        port(
+            x,y : in  std_logic_vector(3 downto 0);           -- bits de A e B
+            Equ             : out std_logic;           -- igual
+            Grt             : out std_logic;           -- maior que
+            Lst             : out std_logic             -- menor que
+ 
+        );
+    end component;
+        
 	 
 
-	 
-	 
 	 
 	 
 	 

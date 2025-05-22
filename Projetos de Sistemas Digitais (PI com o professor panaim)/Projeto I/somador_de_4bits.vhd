@@ -9,16 +9,17 @@ use work.componentes.all;
 
 entity somador_de_4bits is
   port(
-    Cin           : in  std_logic;           -- carry in inicial
-    x3, x2, x1, x0 : in  std_logic;           -- bits de A
-    y3, y2, y1, y0 : in  std_logic;           -- bits de B
-    s3, s2, s1, s0 : out std_logic;           -- bits da soma
-    Cout          : out std_logic            -- carry out final
+    Cin           : in  std_logic;                      -- carry in inicial
+    x,y : in  std_logic_vector(3 downto 0);
+    s : out  std_logic_vector(3 downto 0);            -- bits de A, B e soma
+    Cout          : out std_logic                       -- carry out final
+    zero          : out std_logic                    -- zero
+
   );
 end entity somador_de_4bits;
 
 architecture estrutura_do_somador_de_4bits of somador_de_4bits is
-  signal c1, c2, c3 : std_logic;              -- sinais de carry interno
+  signal c : std_logic_vector(3 downto 0);              -- sinal de carry interno
 begin
 
 
@@ -27,47 +28,48 @@ begin
   -- Bit 0
   stage0: full_adder
     port map(
-      a    => x0,
-      b    => y0,
+      a    => x(0),
+      b    => y(0),
       cin  => Cin,
-      sum  => s0,
-      cout => c1
+      sum  => s(0),
+      cout => c(1)
     );
 
   -- Bit 1
   stage1: full_adder
     port map(
-      a    => x1,
-      b    => y1,
-      cin  => c1,
-      sum  => s1,
-      cout => c2
+      a    => x(1),
+      b    => y(1),
+      cin  => c(1),
+      sum  => s(1),
+      cout => c(2)
     );
 
   -- Bit 2
   stage2: full_adder
     port map(
-      a    => x2,
-      b    => y2,
-      cin  => c2,
-      sum  => s2,
-      cout => c3
+      a    => x(2),
+      b    => y(2),
+      cin  => c(2),
+      sum  => s(2),
+      cout => c(3)
     );
 
   -- Bit 3
   stage3: full_adder
     port map(
-      a    => x3,
-      b    => y3,
-      cin  => c3,
-      sum  => s3,
+      a    => x(3),
+      b    => y(3),
+      cin  => c(3),
+      sum  => s(3),
       cout => Cout
     );
 
+
+    -- demonstra se o resultado da soma é 0 e acende o led conforme for 
+    with sum select
+  zero <= '1' when "0000",
+          '0' when others;
+
 end architecture estrutura_do_somador_de_4bits;
 
-
-
--- Para a lógica do somador de 4 bits, utilizer o full adder mencionado no componentes.vhd
--- arquivo destinado a soma de 2 numeros de 4 bits 
--- também mencionado em componentes.vhd

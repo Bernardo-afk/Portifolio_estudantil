@@ -1,0 +1,39 @@
+library ieee;
+use work.componentes.all;
+use ieee.std_logic_1164.all;
+
+
+entity comparador_de_4bits is
+port(
+    x,y : in  std_logic_vector(3 downto 0);           -- bits de A e B
+    Equ             : out std_logic;           -- igual
+    Grt             : out std_logic;           -- maior que
+    Lst             : out std_logic             -- menor que
+    LDR3, LDR4, LDR5, LDR0, LDR1, LDR2 : out std_logic
+);
+end comparador_de_4bits; 
+
+architecture arquitetura_Do_Comparador of comparador_de_4bits is
+    signal i : std_logic_vector(3 downto 0); -- saidas dos xnor 
+begin
+    i(3) <= x(3) xnor y(3);
+    i(2) <= x(2) xnor y(2);
+    i(1) <= x(1) xnor y(1);
+    i(0) <= x(0) xnor y(0);
+    Equ <= i(3) and i(2) and i(1) and i(0);
+    Grt <= (x(3) and not y(3)) or (i(3) and x(2) and not y(2)) or (i(3) and i(2) and x(1) and not y(1)) or (i(3) and i(2) and i(1) and x(0) and not y(0));
+    Lst <= Equ nor Grt;
+  -- Lógica para os LEDs 
+
+    LDR3 <= '1' when Equ = '1' else 0;
+    LDR4 <= '1' when Grt = '1' else 0;
+    LDR5 <= '1' when Lst = '1' else 0;
+    LDR1 <= '1' 
+        when(LDR3 = '0' and LDR4 = '0' and LDR5 = '0') 
+        else '0';
+    LDR0 <= '0';
+    LDR2 <= '0';
+end arquitetura_Do_Comparador;
+
+
+

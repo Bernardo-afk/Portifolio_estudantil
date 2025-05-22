@@ -19,6 +19,8 @@ architecture arquitetura_do_fulladder of full_adder is
 begin
     sum  <= a xor b xor cin;
     cout <= (a and b) or (b and cin) or (cin and a);
+
+
 end architecture arquitetura_do_fulladder;
 
 

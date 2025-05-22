@@ -1,0 +1,113 @@
+library ieee;
+use work.componentes.all;
+use std_logic_1164.all;
+    entity ula is
+        port(
+            SW            : in  std_logic_vector(10 downto 0); -- entradas
+            HEX0          : out std_logic_vector(6 downto 0); 
+            HEX2          : out std_logic_vector(6 downto 0);
+            HEX4          : out std_logic_vector(6 downto 0);
+            HEX6          : out std_logic_vector(6 downto 0);
+            LDR3, LDR4, LDR5, LDR0, LDR1, LDR2 : out std_logic 
+        );
+    end entity ula;
+
+architecture estrutura_da_ula of ula is
+
+    signal a,b,somador : std_logic_vector(3 downto 0) std_logic;
+    signal Aluop : std_logic_vector(2 downto 0);
+    signal hex0_input, hex2_input, hex4_input : std_logic_vector(3 downto 0);
+    signal resultado : std_logic_vector(3 downto 0);
+    signal LDR3_, LDR4_, LDR5_, LDR0_, LDR1_, LDR2_ : std_logic;
+    signal prod : std_logic_vector(3 downto 0);
+    signal subtracao : std_logic_vector(3 downto 0);
+    
+begin 
+-- MAPEAMENTOS
+    x(3 downto 0) <= SW(10 downto 7);
+    
+    y(3 downto 0) <= SW(6 downto 3);
+
+    aluop(2 downto 0) <= SW(2 downto 0);
+
+    LDR3_, LDR4_, LDR5_, LDR0_, LDR1_, LDR2_ <= LDR3, LDR4, LDR5, LDR0, LDR1, LDR2;
+    
+    -- sinais  ( o '0' é para o hex0_input, hex2_input e hex4_input pois o display está configurado para receber 4 bits)
+                hex0_input <=   '0' & SW(2 downto 0);
+                hex2_input <=   '0' & SW(2 downto 0);
+                hex4_input <=   '0' & SW(2 downto 0);
+
+
+
+-- Instanciação do projeto
+
+
+
+-- o que está na esquerda da instancia é a variavel que está no componente
+        --e o da direita é a variavel que está no arquivo principal
+    soma4bit : somador_de_4bits port map(
+        Cin => '0',
+        x => a,    
+        y => b,
+        s => somador,
+        LDR3, LDR4, LDR5, LDR0, LDR1, LDR2 => LDR3_, LDR4_, LDR5_, LDR0_, LDR1_, LDR2_
+    );
+
+    subtracao4bit : subtracao_De_4bits port map(
+        x => a,
+        y => b,
+        d => subtracao,
+        LDR3, LDR4, LDR5, LDR0, LDR1, LDR2 => LDR3_, LDR4_, LDR5_, LDR0_, LDR1_, LDR2_
+    );
+
+    mult2bit : multiplicador_de_2bits port map(
+        a => a(1 downto 0),
+        b => b(1 downto 0),
+        produto => prod
+    );
+
+    comparador4bit : comparador_de_4bits port map(
+        x => a,
+        y => b,
+        LDR3, LDR4, LDR5, LDR0, LDR1, LDR2 => LDR3_, LDR4_, LDR5_, LDR0_, LDR1_, LDR2_
+    );
+
+   
+
+
+
+
+    with Aluop select
+        resultado<=     (others=>'0') when "000",
+                        (x and y)     when "001",
+                        (x or  y)     when "010",
+                        (not y)       when "011",
+                        somador         when "100",
+                        subtracao     when "101",
+                        prod             when "110",
+                        (others=>'0') when others;
+    
+
+
+
+                -- display 
+                AluOp_display0 : display7seg port map(
+                    hex => hex0_input,
+                    seg => HEX0
+                );
+                B_display2 : display7seg port map(
+                    hex => hex2_input,
+                    seg => HEX2
+                );
+                A_display4 : display7seg port map(
+                    hex => hex4_input,
+                    seg => HEX4
+                );
+                Result_display6 : display7seg port map(            
+                    hex => resultado,               -- resultado declarado como um sinal de 4 bits
+                    seg => HEX6
+                );
+    
+    
+    
+    

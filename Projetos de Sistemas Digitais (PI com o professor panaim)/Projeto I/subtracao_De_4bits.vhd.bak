@@ -5,24 +5,23 @@ use ieee.std_logic_1164.all;
 library work;
 use work.componentes.all;
 
-entity subtracao_De_2bits is
+entity subtracao_De_4bits is
   port(
-    x3, x2, x1, x0 : in  std_logic;           -- bits de A
-    y3, y2, y1, y0 : in  std_logic;           -- bits de B
-    d3, d2, d1, d0 : out std_logic;           -- bits da diferença
-    Pout           : out std_logic            -- "pega um"
+    x,y : in  std_logic_vector(3 downto 0);           -- bits de A
+    d : out std_logic_vector(3 downto 0);           -- bits da diferença
+    Pout           : out std_logic           -- "pega um"
+    LDR3, LDR4, LDR5, LDR0, LDR1, LDR2 : out std_logic
   );
-end entity subtracao_De_2bits;
+end entity subtracao_De_4bits;
 
-architecture arquitetura_do_subtrator of subtracao_De_2bits is
-  signal c1, c2, c3, c4 : std_logic;          -- sinais de carry interno
-  signal b0, b1, b2, b3 : std_logic;          -- bits de B invertidos
+architecture arquitetura_do_subtrator of subtracao_De_4bits is
+  signal c,b : std_logic_vector(3 downto 0);          -- sinais de carry interno e bits de b invertidos
 begin
   -- Gera o complemento de 1 de cada bit de B (segundo numero) 
-  b0 <= not y0;
-  b1 <= not y1;
-  b2 <= not y2;
-  b3 <= not y3;
+  b(0) <= not y(0);
+  b(1) <= not y(1);
+  b(2) <= not y(2);
+  b(3) <= not y(3);
 
   
   
@@ -36,47 +35,53 @@ begin
   
   stage0: full_adder
     port map(
-      a    => x0,
-      b    => b0,
+      a    => x(0),
+      b    => b(0),
       cin  => '1',
-      sum  => d0,
-      cout => c1
+      sum  => d(0),
+      cout => c(0)
     );
 
   -- Stage 1
   stage1: full_adder
     port map(
-      a    => x1,
-      b    => b1,
-      cin  => c1,
-      sum  => d1,
-      cout => c2
+      a    => x(1),
+      b    => b(1),
+      cin  => c(0),
+      sum  => d(1),
+      cout => c(1)
     );
 
   -- Stage 2
   stage2: full_adder
     port map(
-      a    => x2,
-      b    => b2,
-      cin  => c2,
-      sum  => d2,
-      cout => c3
+      a    => x(2),
+      b    => b(2),
+      cin  => c(1),
+      sum  => d(2),
+      cout => c(2)
     );
 
   -- Stage 3
   stage3: full_adder
     port map(
-      a    => x3,
-      b    => b3,
-      cin  => c3,
-      sum  => d3,
-      cout => c4
+      a    => x(3),
+      b    => b(3),
+      cin  => c(2),
+      sum  => d(3),
+      cout => c(3)
     );
 
   -- Variável que indica se a subtração A-B resulta em um numero < 0 
   -- Tal que indicará OVERFLOW -- !!! LIGAR LED DE OVERFLOW
   
-  Pout <= not c4;
+  Pout <= not c(3);
+  LDR2 <= '1' when Pout = '1' else '0';
+  LDR1 <= '0'
+  LDR3 <= '0'
+  LDR4 <= '0'
+  LDR5 <= '0'
+  LDR0 <= '1' when Pout = '1' else '0';
 
 end architecture arquitetura_do_subtrator;
 

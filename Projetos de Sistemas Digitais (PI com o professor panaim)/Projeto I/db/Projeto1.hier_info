@@ -1,4 +1,199 @@
-|full_adder
+|ula
+SW[0] => Mux0.IN10
+SW[0] => Mux1.IN10
+SW[0] => Mux2.IN10
+SW[0] => Mux3.IN10
+SW[0] => Mux4.IN10
+SW[0] => Mux5.IN10
+SW[0] => Mux6.IN10
+SW[0] => process_0.IN1
+SW[0] => Mux7.IN8
+SW[0] => Mux8.IN8
+SW[0] => Mux9.IN8
+SW[0] => Mux10.IN8
+SW[1] => Mux0.IN9
+SW[1] => Mux1.IN9
+SW[1] => Mux2.IN9
+SW[1] => Mux3.IN9
+SW[1] => Mux4.IN9
+SW[1] => Mux5.IN9
+SW[1] => Mux6.IN9
+SW[1] => process_0.IN0
+SW[1] => Mux7.IN7
+SW[1] => Mux8.IN7
+SW[1] => Mux9.IN7
+SW[1] => Mux10.IN7
+SW[2] => Mux0.IN8
+SW[2] => Mux1.IN8
+SW[2] => Mux2.IN8
+SW[2] => Mux3.IN8
+SW[2] => Mux4.IN8
+SW[2] => Mux5.IN8
+SW[2] => Mux6.IN8
+SW[2] => process_0.IN1
+SW[2] => Mux7.IN6
+SW[2] => Mux8.IN6
+SW[2] => Mux9.IN6
+SW[2] => Mux10.IN6
+SW[3] => resultado.IN0
+SW[3] => resultado.IN0
+SW[3] => Mux25.IN19
+SW[3] => Mux26.IN19
+SW[3] => Mux27.IN19
+SW[3] => Mux28.IN19
+SW[3] => Mux29.IN19
+SW[3] => Mux30.IN19
+SW[3] => Mux31.IN19
+SW[3] => somador_de_4bits:soma4bit.y[0]
+SW[3] => subtracao_De_4bits:subtracao4bit.y[0]
+SW[3] => multiplicador_de_2bits:mult2bit.b[0]
+SW[3] => comparador:comparador4bit.y[0]
+SW[3] => Mux10.IN4
+SW[4] => resultado.IN0
+SW[4] => resultado.IN0
+SW[4] => Mux25.IN18
+SW[4] => Mux26.IN18
+SW[4] => Mux27.IN18
+SW[4] => Mux28.IN18
+SW[4] => Mux29.IN18
+SW[4] => Mux30.IN18
+SW[4] => Mux31.IN18
+SW[4] => somador_de_4bits:soma4bit.y[1]
+SW[4] => subtracao_De_4bits:subtracao4bit.y[1]
+SW[4] => multiplicador_de_2bits:mult2bit.b[1]
+SW[4] => comparador:comparador4bit.y[1]
+SW[4] => Mux9.IN4
+SW[5] => resultado.IN0
+SW[5] => resultado.IN0
+SW[5] => Mux25.IN17
+SW[5] => Mux26.IN17
+SW[5] => Mux27.IN17
+SW[5] => Mux28.IN17
+SW[5] => Mux29.IN17
+SW[5] => Mux30.IN17
+SW[5] => Mux31.IN17
+SW[5] => somador_de_4bits:soma4bit.y[2]
+SW[5] => subtracao_De_4bits:subtracao4bit.y[2]
+SW[5] => comparador:comparador4bit.y[2]
+SW[5] => Mux8.IN4
+SW[6] => resultado.IN0
+SW[6] => resultado.IN0
+SW[6] => Mux25.IN16
+SW[6] => Mux26.IN16
+SW[6] => Mux27.IN16
+SW[6] => Mux28.IN16
+SW[6] => Mux29.IN16
+SW[6] => Mux30.IN16
+SW[6] => Mux31.IN16
+SW[6] => somador_de_4bits:soma4bit.y[3]
+SW[6] => subtracao_De_4bits:subtracao4bit.y[3]
+SW[6] => comparador:comparador4bit.y[3]
+SW[6] => Mux7.IN4
+SW[7] => resultado.IN1
+SW[7] => resultado.IN1
+SW[7] => Mux18.IN19
+SW[7] => Mux19.IN19
+SW[7] => Mux20.IN19
+SW[7] => Mux21.IN19
+SW[7] => Mux22.IN19
+SW[7] => Mux23.IN19
+SW[7] => Mux24.IN19
+SW[7] => somador_de_4bits:soma4bit.x[0]
+SW[7] => subtracao_De_4bits:subtracao4bit.x[0]
+SW[7] => multiplicador_de_2bits:mult2bit.a[0]
+SW[7] => comparador:comparador4bit.x[0]
+SW[8] => resultado.IN1
+SW[8] => resultado.IN1
+SW[8] => Mux18.IN18
+SW[8] => Mux19.IN18
+SW[8] => Mux20.IN18
+SW[8] => Mux21.IN18
+SW[8] => Mux22.IN18
+SW[8] => Mux23.IN18
+SW[8] => Mux24.IN18
+SW[8] => somador_de_4bits:soma4bit.x[1]
+SW[8] => subtracao_De_4bits:subtracao4bit.x[1]
+SW[8] => multiplicador_de_2bits:mult2bit.a[1]
+SW[8] => comparador:comparador4bit.x[1]
+SW[9] => resultado.IN1
+SW[9] => resultado.IN1
+SW[9] => Mux18.IN17
+SW[9] => Mux19.IN17
+SW[9] => Mux20.IN17
+SW[9] => Mux21.IN17
+SW[9] => Mux22.IN17
+SW[9] => Mux23.IN17
+SW[9] => Mux24.IN17
+SW[9] => somador_de_4bits:soma4bit.x[2]
+SW[9] => subtracao_De_4bits:subtracao4bit.x[2]
+SW[9] => comparador:comparador4bit.x[2]
+SW[10] => resultado.IN1
+SW[10] => resultado.IN1
+SW[10] => Mux18.IN16
+SW[10] => Mux19.IN16
+SW[10] => Mux20.IN16
+SW[10] => Mux21.IN16
+SW[10] => Mux22.IN16
+SW[10] => Mux23.IN16
+SW[10] => Mux24.IN16
+SW[10] => somador_de_4bits:soma4bit.x[3]
+SW[10] => subtracao_De_4bits:subtracao4bit.x[3]
+SW[10] => comparador:comparador4bit.x[3]
+HEX6[6] <= Mux17.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[5] <= Mux16.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[4] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[3] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[2] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[1] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+HEX6[0] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[6] <= Mux24.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[5] <= Mux23.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[4] <= Mux22.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[3] <= Mux21.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[2] <= Mux20.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[1] <= Mux19.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[0] <= Mux18.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[6] <= Mux31.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[5] <= Mux30.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[4] <= Mux29.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[3] <= Mux28.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[2] <= Mux27.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[1] <= Mux26.DB_MAX_OUTPUT_PORT_TYPE
+HEX2[0] <= Mux25.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= <GND>
+LEDR[5] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= subtracao_De_4bits:subtracao4bit.overflow
+LEDR[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[0] <= somador_de_4bits:soma4bit.Cout
+
+
+|ula|somador_de_4bits:soma4bit
+Cin => full_adder:stage0.cin
+x[0] => full_adder:stage0.a
+x[1] => full_adder:stage1.a
+x[2] => full_adder:stage2.a
+x[3] => full_adder:stage3.a
+y[0] => full_adder:stage0.b
+y[1] => full_adder:stage1.b
+y[2] => full_adder:stage2.b
+y[3] => full_adder:stage3.b
+s[0] <= full_adder:stage0.sum
+s[1] <= full_adder:stage1.sum
+s[2] <= full_adder:stage2.sum
+s[3] <= full_adder:stage3.sum
+Cout <= full_adder:stage3.cout
+
+
+|ula|somador_de_4bits:soma4bit|full_adder:stage0
 a => sum.IN0
 a => cout.IN0
 a => cout.IN0
@@ -10,5 +205,184 @@ cin => cout.IN1
 cin => cout.IN1
 sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|somador_de_4bits:soma4bit|full_adder:stage1
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|somador_de_4bits:soma4bit|full_adder:stage2
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|somador_de_4bits:soma4bit|full_adder:stage3
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|subtracao_De_4bits:subtracao4bit
+x[0] => full_adder:stage0.a
+x[1] => full_adder:stage1.a
+x[2] => full_adder:stage2.a
+x[3] => full_adder:stage3.a
+y[0] => full_adder:stage0.b
+y[1] => full_adder:stage1.b
+y[2] => full_adder:stage2.b
+y[3] => full_adder:stage3.b
+d[0] <= full_adder:stage0.sum
+d[1] <= full_adder:stage1.sum
+d[2] <= full_adder:stage2.sum
+d[3] <= full_adder:stage3.sum
+overflow <= full_adder:stage3.cout
+
+
+|ula|subtracao_De_4bits:subtracao4bit|full_adder:stage0
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|subtracao_De_4bits:subtracao4bit|full_adder:stage1
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|subtracao_De_4bits:subtracao4bit|full_adder:stage2
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|subtracao_De_4bits:subtracao4bit|full_adder:stage3
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|multiplicador_de_2bits:mult2bit
+a[0] => pp0.IN0
+a[0] => pp2.IN0
+a[1] => pp1.IN0
+a[1] => pp3.IN0
+b[0] => pp0.IN1
+b[0] => pp1.IN1
+b[1] => pp2.IN1
+b[1] => pp3.IN1
+produto[0] <= pp0.DB_MAX_OUTPUT_PORT_TYPE
+produto[1] <= full_adder:stage1.sum
+produto[2] <= full_adder:stage2.sum
+produto[3] <= full_adder:stage2.cout
+
+
+|ula|multiplicador_de_2bits:mult2bit|full_adder:stage1
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|multiplicador_de_2bits:mult2bit|full_adder:stage2
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|comparador:comparador4bit
+x[0] => i[0].IN0
+x[0] => Grt.IN1
+x[1] => i[1].IN0
+x[1] => Grt.IN1
+x[2] => i[2].IN0
+x[2] => Grt.IN1
+x[3] => i[3].IN0
+x[3] => Grt.IN0
+y[0] => i[0].IN1
+y[0] => Grt.IN1
+y[1] => i[1].IN1
+y[1] => Grt.IN1
+y[2] => i[2].IN1
+y[2] => Grt.IN1
+y[3] => i[3].IN1
+y[3] => Grt.IN1
+Equ <= Equ.DB_MAX_OUTPUT_PORT_TYPE
+Grt <= Grt.DB_MAX_OUTPUT_PORT_TYPE
+Lst <= Lst.DB_MAX_OUTPUT_PORT_TYPE
 
 
