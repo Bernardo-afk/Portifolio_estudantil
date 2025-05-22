@@ -1,5 +1,5 @@
 Fitter report for Projeto1
-Wed May 21 15:15:26 2025
+Thu May 22 12:18:15 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -63,15 +63,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed May 21 15:15:26 2025       ;
+; Fitter Status                      ; Successful - Thu May 22 12:18:15 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Projeto1                                    ;
 ; Top-level Entity Name              ; ula                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 72 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 72 / 114,480 ( < 1 % )                      ;
+; Total logic elements               ; 76 / 114,480 ( < 1 % )                      ;
+;     Total combinational functions  ; 76 / 114,480 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                         ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 46 / 529 ( 9 % )                            ;
@@ -534,8 +534,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 175 ) ; 0.00 % ( 0 / 175 )         ; 0.00 % ( 0 / 175 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 175 ) ; 0.00 % ( 0 / 175 )         ; 0.00 % ( 0 / 175 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 179 ) ; 0.00 % ( 0 / 179 )         ; 0.00 % ( 0 / 179 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 179 ) ; 0.00 % ( 0 / 179 )         ; 0.00 % ( 0 / 179 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -558,7 +558,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 165 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 169 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -574,26 +574,26 @@ The pin-out file can be found in D:/repositorio_faculdade/Portifolio_estudantil/
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 72 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 72                     ;
+; Total logic elements                        ; 76 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 76                     ;
 ;     -- Register only                        ; 0                      ;
 ;     -- Combinational with a register        ; 0                      ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 48                     ;
-;     -- 3 input functions                    ; 21                     ;
-;     -- <=2 input functions                  ; 3                      ;
+;     -- 4 input functions                    ; 52                     ;
+;     -- 3 input functions                    ; 20                     ;
+;     -- <=2 input functions                  ; 4                      ;
 ;     -- Register only                        ; 0                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 72                     ;
+;     -- normal mode                          ; 76                     ;
 ;     -- arithmetic mode                      ; 0                      ;
 ;                                             ;                        ;
 ; Total registers*                            ; 0 / 117,053 ( 0 % )    ;
 ;     -- Dedicated logic registers            ; 0 / 114,480 ( 0 % )    ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 5 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 6 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 46 / 529 ( 9 % )       ;
 ;     -- Clock pins                           ; 0 / 7 ( 0 % )          ;
@@ -612,11 +612,11 @@ The pin-out file can be found in D:/repositorio_faculdade/Portifolio_estudantil/
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%     ;
-; Peak interconnect usage (total/H/V)         ; 1.3% / 1.3% / 1.4%     ;
-; Maximum fan-out                             ; 18                     ;
-; Highest non-global fan-out                  ; 18                     ;
-; Total fan-out                               ; 345                    ;
-; Average fan-out                             ; 1.98                   ;
+; Peak interconnect usage (total/H/V)         ; 1.3% / 1.2% / 1.5%     ;
+; Maximum fan-out                             ; 19                     ;
+; Highest non-global fan-out                  ; 19                     ;
+; Total fan-out                               ; 361                    ;
+; Average fan-out                             ; 2.03                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -629,26 +629,26 @@ The pin-out file can be found in D:/repositorio_faculdade/Portifolio_estudantil/
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 72 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 72                    ; 0                              ;
+; Total logic elements                        ; 76 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 76                    ; 0                              ;
 ;     -- Register only                        ; 0                     ; 0                              ;
 ;     -- Combinational with a register        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 48                    ; 0                              ;
-;     -- 3 input functions                    ; 21                    ; 0                              ;
-;     -- <=2 input functions                  ; 3                     ; 0                              ;
+;     -- 4 input functions                    ; 52                    ; 0                              ;
+;     -- 3 input functions                    ; 20                    ; 0                              ;
+;     -- <=2 input functions                  ; 4                     ; 0                              ;
 ;     -- Register only                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 72                    ; 0                              ;
+;     -- normal mode                          ; 76                    ; 0                              ;
 ;     -- arithmetic mode                      ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 0                     ; 0                              ;
 ;     -- Dedicated logic registers            ; 0 / 114480 ( 0 % )    ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 5 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 6 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 46                    ; 0                              ;
@@ -663,7 +663,7 @@ The pin-out file can be found in D:/repositorio_faculdade/Portifolio_estudantil/
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 340                   ; 5                              ;
+;     -- Total Connections                    ; 356                   ; 5                              ;
 ;     -- Registered Connections               ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
@@ -697,16 +697,16 @@ The pin-out file can be found in D:/repositorio_faculdade/Portifolio_estudantil/
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; SW[0]  ; AB28  ; 5        ; 115          ; 17           ; 0            ; 18                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[10] ; AC24  ; 5        ; 115          ; 4            ; 14           ; 14                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[1]  ; AC28  ; 5        ; 115          ; 14           ; 0            ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[2]  ; AC27  ; 5        ; 115          ; 15           ; 7            ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[3]  ; AD27  ; 5        ; 115          ; 13           ; 7            ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[4]  ; AB27  ; 5        ; 115          ; 18           ; 7            ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[5]  ; AC26  ; 5        ; 115          ; 11           ; 7            ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[6]  ; AD26  ; 5        ; 115          ; 10           ; 0            ; 14                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[7]  ; AB26  ; 5        ; 115          ; 15           ; 0            ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[8]  ; AC25  ; 5        ; 115          ; 4            ; 21           ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[9]  ; AB25  ; 5        ; 115          ; 16           ; 7            ; 16                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[10] ; AC24  ; 5        ; 115          ; 4            ; 14           ; 15                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[1]  ; AC28  ; 5        ; 115          ; 14           ; 0            ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[2]  ; AC27  ; 5        ; 115          ; 15           ; 7            ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[3]  ; AD27  ; 5        ; 115          ; 13           ; 7            ; 19                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[4]  ; AB27  ; 5        ; 115          ; 18           ; 7            ; 18                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[5]  ; AC26  ; 5        ; 115          ; 11           ; 7            ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[6]  ; AD26  ; 5        ; 115          ; 10           ; 0            ; 15                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[7]  ; AB26  ; 5        ; 115          ; 15           ; 0            ; 18                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[8]  ; AC25  ; 5        ; 115          ; 4            ; 21           ; 18                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[9]  ; AB25  ; 5        ; 115          ; 16           ; 7            ; 17                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -1619,10 +1619,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; LEDR[2]  ; Incomplete set of assignments ;
 ; LEDR[1]  ; Incomplete set of assignments ;
 ; LEDR[0]  ; Incomplete set of assignments ;
-; SW[3]    ; Incomplete set of assignments ;
-; SW[2]    ; Incomplete set of assignments ;
-; SW[7]    ; Incomplete set of assignments ;
 ; SW[1]    ; Incomplete set of assignments ;
+; SW[3]    ; Incomplete set of assignments ;
+; SW[7]    ; Incomplete set of assignments ;
+; SW[2]    ; Incomplete set of assignments ;
 ; SW[0]    ; Incomplete set of assignments ;
 ; SW[4]    ; Incomplete set of assignments ;
 ; SW[8]    ; Incomplete set of assignments ;
@@ -1638,19 +1638,19 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node            ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                     ; Entity Name            ; Library Name ;
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------+------------------------+--------------+
-; |ula                                  ; 72 (56)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 46   ; 0            ; 72 (56)      ; 0 (0)             ; 0 (0)            ; |ula                                                    ; ula                    ; work         ;
+; |ula                                  ; 76 (62)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 46   ; 0            ; 76 (62)      ; 0 (0)             ; 0 (0)            ; |ula                                                    ; ula                    ; work         ;
 ;    |comparador:comparador4bit|        ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |ula|comparador:comparador4bit                          ; comparador             ; work         ;
 ;    |multiplicador_de_2bits:mult2bit|  ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |ula|multiplicador_de_2bits:mult2bit                    ; multiplicador_de_2bits ; work         ;
 ;       |full_adder:stage1|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |ula|multiplicador_de_2bits:mult2bit|full_adder:stage1  ; full_adder             ; work         ;
 ;       |full_adder:stage2|             ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |ula|multiplicador_de_2bits:mult2bit|full_adder:stage2  ; full_adder             ; work         ;
-;    |somador_de_4bits:soma4bit|        ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |ula|somador_de_4bits:soma4bit                          ; somador_de_4bits       ; work         ;
+;    |somador_de_4bits:soma4bit|        ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |ula|somador_de_4bits:soma4bit                          ; somador_de_4bits       ; work         ;
 ;       |full_adder:stage1|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |ula|somador_de_4bits:soma4bit|full_adder:stage1        ; full_adder             ; work         ;
 ;       |full_adder:stage2|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |ula|somador_de_4bits:soma4bit|full_adder:stage2        ; full_adder             ; work         ;
-;       |full_adder:stage3|             ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |ula|somador_de_4bits:soma4bit|full_adder:stage3        ; full_adder             ; work         ;
-;    |subtracao_De_4bits:subtracao4bit| ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |ula|subtracao_De_4bits:subtracao4bit                   ; subtracao_De_4bits     ; work         ;
+;       |full_adder:stage3|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |ula|somador_de_4bits:soma4bit|full_adder:stage3        ; full_adder             ; work         ;
+;    |subtracao_De_4bits:subtracao4bit| ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |ula|subtracao_De_4bits:subtracao4bit                   ; subtracao_De_4bits     ; work         ;
 ;       |full_adder:stage1|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |ula|subtracao_De_4bits:subtracao4bit|full_adder:stage1 ; full_adder             ; work         ;
 ;       |full_adder:stage2|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |ula|subtracao_De_4bits:subtracao4bit|full_adder:stage2 ; full_adder             ; work         ;
-;       |full_adder:stage3|             ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |ula|subtracao_De_4bits:subtracao4bit|full_adder:stage3 ; full_adder             ; work         ;
+;       |full_adder:stage3|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |ula|subtracao_De_4bits:subtracao4bit|full_adder:stage3 ; full_adder             ; work         ;
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1695,17 +1695,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[2] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDR[1] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDR[0] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SW[1]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[3]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[2]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[7]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[1]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[7]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[2]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[0]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[4]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[8]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[5]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[9]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SW[5]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[9]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[6]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[10]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[10]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +---------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -1714,8 +1714,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                                              ; Pad To Core Index ; Setting ;
 +------------------------------------------------------------------+-------------------+---------+
-; SW[3]                                                            ;                   ;         ;
+; SW[1]                                                            ;                   ;         ;
+;      - Mux10~4                                                   ; 0                 ; 6       ;
+;      - Mux7~0                                                    ; 0                 ; 6       ;
+;      - Mux7~1                                                    ; 0                 ; 6       ;
+;      - Mux9~3                                                    ; 0                 ; 6       ;
+;      - Mux8~6                                                    ; 0                 ; 6       ;
+;      - Mux7~6                                                    ; 0                 ; 6       ;
+;      - Mux6~0                                                    ; 0                 ; 6       ;
+;      - Mux5~0                                                    ; 0                 ; 6       ;
+;      - Mux4~0                                                    ; 0                 ; 6       ;
+;      - Mux3~0                                                    ; 0                 ; 6       ;
+;      - Mux2~0                                                    ; 0                 ; 6       ;
+;      - Mux1~0                                                    ; 0                 ; 6       ;
+;      - Mux0~0                                                    ; 0                 ; 6       ;
+;      - Mux37~0                                                   ; 0                 ; 6       ;
+;      - Mux32~0                                                   ; 0                 ; 6       ;
 ;      - Mux10~2                                                   ; 0                 ; 6       ;
+;      - Mux10~3                                                   ; 0                 ; 6       ;
+; SW[3]                                                            ;                   ;         ;
 ;      - multiplicador_de_2bits:mult2bit|full_adder:stage1|sum~0   ; 0                 ; 6       ;
 ;      - subtracao_De_4bits:subtracao4bit|full_adder:stage1|cout~0 ; 0                 ; 6       ;
 ;      - multiplicador_de_2bits:mult2bit|full_adder:stage2|sum~0   ; 0                 ; 6       ;
@@ -1730,63 +1747,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux25~0                                                   ; 0                 ; 6       ;
 ;      - comparador:comparador4bit|Equ~0                           ; 0                 ; 6       ;
 ;      - comparador:comparador4bit|Grt~0                           ; 0                 ; 6       ;
+;      - Mux33~0                                                   ; 0                 ; 6       ;
+;      - Mux10~2                                                   ; 0                 ; 6       ;
+;      - Mux10~3                                                   ; 0                 ; 6       ;
 ;      - Mux9~4                                                    ; 0                 ; 6       ;
 ;      - Mux9~5                                                    ; 0                 ; 6       ;
-; SW[2]                                                            ;                   ;         ;
-;      - Mux10~0                                                   ; 1                 ; 6       ;
-;      - Mux10~1                                                   ; 1                 ; 6       ;
-;      - Mux10~3                                                   ; 1                 ; 6       ;
-;      - Mux7~0                                                    ; 1                 ; 6       ;
-;      - Mux7~1                                                    ; 1                 ; 6       ;
-;      - Mux9~3                                                    ; 1                 ; 6       ;
-;      - Mux8~6                                                    ; 1                 ; 6       ;
-;      - Mux7~6                                                    ; 1                 ; 6       ;
-;      - Mux6~0                                                    ; 1                 ; 6       ;
-;      - Mux5~0                                                    ; 1                 ; 6       ;
-;      - Mux4~0                                                    ; 1                 ; 6       ;
-;      - Mux3~0                                                    ; 1                 ; 6       ;
-;      - Mux2~0                                                    ; 1                 ; 6       ;
-;      - Mux1~0                                                    ; 1                 ; 6       ;
-;      - Mux0~0                                                    ; 1                 ; 6       ;
-;      - LEDR~0                                                    ; 1                 ; 6       ;
 ; SW[7]                                                            ;                   ;         ;
-;      - Mux10~0                                                   ; 0                 ; 6       ;
-;      - Mux10~1                                                   ; 0                 ; 6       ;
-;      - multiplicador_de_2bits:mult2bit|full_adder:stage1|sum~0   ; 0                 ; 6       ;
-;      - subtracao_De_4bits:subtracao4bit|full_adder:stage1|cout~0 ; 0                 ; 6       ;
-;      - multiplicador_de_2bits:mult2bit|full_adder:stage2|sum~0   ; 0                 ; 6       ;
-;      - somador_de_4bits:soma4bit|full_adder:stage1|cout~0        ; 0                 ; 6       ;
-;      - multiplicador_de_2bits:mult2bit|full_adder:stage2|cout~0  ; 0                 ; 6       ;
-;      - Mux24~0                                                   ; 0                 ; 6       ;
-;      - Mux23~0                                                   ; 0                 ; 6       ;
-;      - Mux22~0                                                   ; 0                 ; 6       ;
-;      - Mux21~0                                                   ; 0                 ; 6       ;
-;      - Mux20~0                                                   ; 0                 ; 6       ;
-;      - Mux19~0                                                   ; 0                 ; 6       ;
-;      - Mux18~0                                                   ; 0                 ; 6       ;
-;      - comparador:comparador4bit|Equ~0                           ; 0                 ; 6       ;
-;      - comparador:comparador4bit|Grt~0                           ; 0                 ; 6       ;
-;      - Mux9~4                                                    ; 0                 ; 6       ;
-; SW[1]                                                            ;                   ;         ;
-;      - Mux10~0                                                   ; 1                 ; 6       ;
-;      - Mux10~1                                                   ; 1                 ; 6       ;
+;      - multiplicador_de_2bits:mult2bit|full_adder:stage1|sum~0   ; 1                 ; 6       ;
+;      - subtracao_De_4bits:subtracao4bit|full_adder:stage1|cout~0 ; 1                 ; 6       ;
+;      - multiplicador_de_2bits:mult2bit|full_adder:stage2|sum~0   ; 1                 ; 6       ;
+;      - somador_de_4bits:soma4bit|full_adder:stage1|cout~0        ; 1                 ; 6       ;
+;      - multiplicador_de_2bits:mult2bit|full_adder:stage2|cout~0  ; 1                 ; 6       ;
+;      - Mux24~0                                                   ; 1                 ; 6       ;
+;      - Mux23~0                                                   ; 1                 ; 6       ;
+;      - Mux22~0                                                   ; 1                 ; 6       ;
+;      - Mux21~0                                                   ; 1                 ; 6       ;
+;      - Mux20~0                                                   ; 1                 ; 6       ;
+;      - Mux19~0                                                   ; 1                 ; 6       ;
+;      - Mux18~0                                                   ; 1                 ; 6       ;
+;      - comparador:comparador4bit|Equ~0                           ; 1                 ; 6       ;
+;      - comparador:comparador4bit|Grt~0                           ; 1                 ; 6       ;
+;      - Mux33~0                                                   ; 1                 ; 6       ;
+;      - Mux10~2                                                   ; 1                 ; 6       ;
 ;      - Mux10~3                                                   ; 1                 ; 6       ;
-;      - Mux7~0                                                    ; 1                 ; 6       ;
-;      - Mux7~1                                                    ; 1                 ; 6       ;
-;      - Mux9~3                                                    ; 1                 ; 6       ;
-;      - Mux8~6                                                    ; 1                 ; 6       ;
-;      - Mux7~6                                                    ; 1                 ; 6       ;
-;      - Mux6~0                                                    ; 1                 ; 6       ;
-;      - Mux5~0                                                    ; 1                 ; 6       ;
-;      - Mux4~0                                                    ; 1                 ; 6       ;
-;      - Mux3~0                                                    ; 1                 ; 6       ;
-;      - Mux2~0                                                    ; 1                 ; 6       ;
-;      - Mux1~0                                                    ; 1                 ; 6       ;
-;      - Mux0~0                                                    ; 1                 ; 6       ;
-;      - LEDR~0                                                    ; 1                 ; 6       ;
+;      - Mux9~4                                                    ; 1                 ; 6       ;
+; SW[2]                                                            ;                   ;         ;
+;      - Mux10~4                                                   ; 0                 ; 6       ;
+;      - Mux7~0                                                    ; 0                 ; 6       ;
+;      - Mux7~1                                                    ; 0                 ; 6       ;
+;      - Mux9~3                                                    ; 0                 ; 6       ;
+;      - Mux8~6                                                    ; 0                 ; 6       ;
+;      - Mux7~6                                                    ; 0                 ; 6       ;
+;      - Mux6~0                                                    ; 0                 ; 6       ;
+;      - Mux5~0                                                    ; 0                 ; 6       ;
+;      - Mux4~0                                                    ; 0                 ; 6       ;
+;      - Mux3~0                                                    ; 0                 ; 6       ;
+;      - Mux2~0                                                    ; 0                 ; 6       ;
+;      - Mux1~0                                                    ; 0                 ; 6       ;
+;      - Mux0~0                                                    ; 0                 ; 6       ;
+;      - Mux37~0                                                   ; 0                 ; 6       ;
+;      - Mux32~0                                                   ; 0                 ; 6       ;
+;      - Mux10~2                                                   ; 0                 ; 6       ;
+;      - Mux10~3                                                   ; 0                 ; 6       ;
 ; SW[0]                                                            ;                   ;         ;
-;      - Mux10~0                                                   ; 0                 ; 6       ;
-;      - Mux10~1                                                   ; 0                 ; 6       ;
 ;      - Mux9~0                                                    ; 0                 ; 6       ;
 ;      - Mux7~0                                                    ; 0                 ; 6       ;
 ;      - Mux7~1                                                    ; 0                 ; 6       ;
@@ -1802,7 +1805,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux2~0                                                    ; 0                 ; 6       ;
 ;      - Mux1~0                                                    ; 0                 ; 6       ;
 ;      - Mux0~0                                                    ; 0                 ; 6       ;
-;      - LEDR~0                                                    ; 0                 ; 6       ;
+;      - Mux37~0                                                   ; 0                 ; 6       ;
+;      - Mux32~0                                                   ; 0                 ; 6       ;
+;      - Mux10~5                                                   ; 0                 ; 6       ;
 ; SW[4]                                                            ;                   ;         ;
 ;      - multiplicador_de_2bits:mult2bit|full_adder:stage1|sum~0   ; 0                 ; 6       ;
 ;      - Mux9~0                                                    ; 0                 ; 6       ;
@@ -1820,6 +1825,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux25~0                                                   ; 0                 ; 6       ;
 ;      - comparador:comparador4bit|Equ~0                           ; 0                 ; 6       ;
 ;      - comparador:comparador4bit|Grt~0                           ; 0                 ; 6       ;
+;      - Mux33~1                                                   ; 0                 ; 6       ;
 ;      - Mux9~4                                                    ; 0                 ; 6       ;
 ; SW[8]                                                            ;                   ;         ;
 ;      - multiplicador_de_2bits:mult2bit|full_adder:stage1|sum~0   ; 1                 ; 6       ;
@@ -1838,41 +1844,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux18~0                                                   ; 1                 ; 6       ;
 ;      - comparador:comparador4bit|Equ~0                           ; 1                 ; 6       ;
 ;      - comparador:comparador4bit|Grt~0                           ; 1                 ; 6       ;
+;      - Mux33~1                                                   ; 1                 ; 6       ;
 ;      - Mux9~4                                                    ; 1                 ; 6       ;
 ; SW[5]                                                            ;                   ;         ;
-;      - Mux8~2                                                    ; 1                 ; 6       ;
-;      - comparador:comparador4bit|i[2]~0                          ; 1                 ; 6       ;
-;      - Mux8~5                                                    ; 1                 ; 6       ;
-;      - subtracao_De_4bits:subtracao4bit|full_adder:stage3|sum    ; 1                 ; 6       ;
-;      - somador_de_4bits:soma4bit|full_adder:stage3|sum           ; 1                 ; 6       ;
-;      - Mux31~0                                                   ; 1                 ; 6       ;
-;      - Mux30~0                                                   ; 1                 ; 6       ;
-;      - Mux29~0                                                   ; 1                 ; 6       ;
-;      - Mux28~0                                                   ; 1                 ; 6       ;
-;      - Mux27~0                                                   ; 1                 ; 6       ;
-;      - Mux26~0                                                   ; 1                 ; 6       ;
-;      - Mux25~0                                                   ; 1                 ; 6       ;
-;      - comparador:comparador4bit|Grt~1                           ; 1                 ; 6       ;
-;      - subtracao_De_4bits:subtracao4bit|full_adder:stage2|cout~0 ; 1                 ; 6       ;
-;      - somador_de_4bits:soma4bit|full_adder:stage2|cout~0        ; 1                 ; 6       ;
-;      - Mux8~7                                                    ; 1                 ; 6       ;
+;      - Mux8~2                                                    ; 0                 ; 6       ;
+;      - comparador:comparador4bit|i[2]~0                          ; 0                 ; 6       ;
+;      - Mux8~5                                                    ; 0                 ; 6       ;
+;      - subtracao_De_4bits:subtracao4bit|full_adder:stage3|sum    ; 0                 ; 6       ;
+;      - somador_de_4bits:soma4bit|full_adder:stage3|sum           ; 0                 ; 6       ;
+;      - Mux31~0                                                   ; 0                 ; 6       ;
+;      - Mux30~0                                                   ; 0                 ; 6       ;
+;      - Mux29~0                                                   ; 0                 ; 6       ;
+;      - Mux28~0                                                   ; 0                 ; 6       ;
+;      - Mux27~0                                                   ; 0                 ; 6       ;
+;      - Mux26~0                                                   ; 0                 ; 6       ;
+;      - Mux25~0                                                   ; 0                 ; 6       ;
+;      - comparador:comparador4bit|Grt~1                           ; 0                 ; 6       ;
+;      - subtracao_De_4bits:subtracao4bit|full_adder:stage2|cout~0 ; 0                 ; 6       ;
+;      - Mux33~1                                                   ; 0                 ; 6       ;
+;      - somador_de_4bits:soma4bit|full_adder:stage2|cout~0        ; 0                 ; 6       ;
+;      - Mux8~7                                                    ; 0                 ; 6       ;
 ; SW[9]                                                            ;                   ;         ;
-;      - Mux8~2                                                    ; 1                 ; 6       ;
-;      - comparador:comparador4bit|i[2]~0                          ; 1                 ; 6       ;
-;      - Mux8~5                                                    ; 1                 ; 6       ;
-;      - subtracao_De_4bits:subtracao4bit|full_adder:stage3|sum    ; 1                 ; 6       ;
-;      - somador_de_4bits:soma4bit|full_adder:stage3|sum           ; 1                 ; 6       ;
-;      - Mux24~0                                                   ; 1                 ; 6       ;
-;      - Mux23~0                                                   ; 1                 ; 6       ;
-;      - Mux22~0                                                   ; 1                 ; 6       ;
-;      - Mux21~0                                                   ; 1                 ; 6       ;
-;      - Mux20~0                                                   ; 1                 ; 6       ;
-;      - Mux19~0                                                   ; 1                 ; 6       ;
-;      - Mux18~0                                                   ; 1                 ; 6       ;
-;      - comparador:comparador4bit|Grt~1                           ; 1                 ; 6       ;
-;      - subtracao_De_4bits:subtracao4bit|full_adder:stage2|cout~0 ; 1                 ; 6       ;
-;      - somador_de_4bits:soma4bit|full_adder:stage2|cout~0        ; 1                 ; 6       ;
-;      - Mux8~7                                                    ; 1                 ; 6       ;
+;      - Mux8~2                                                    ; 0                 ; 6       ;
+;      - comparador:comparador4bit|i[2]~0                          ; 0                 ; 6       ;
+;      - Mux8~5                                                    ; 0                 ; 6       ;
+;      - subtracao_De_4bits:subtracao4bit|full_adder:stage3|sum    ; 0                 ; 6       ;
+;      - somador_de_4bits:soma4bit|full_adder:stage3|sum           ; 0                 ; 6       ;
+;      - Mux24~0                                                   ; 0                 ; 6       ;
+;      - Mux23~0                                                   ; 0                 ; 6       ;
+;      - Mux22~0                                                   ; 0                 ; 6       ;
+;      - Mux21~0                                                   ; 0                 ; 6       ;
+;      - Mux20~0                                                   ; 0                 ; 6       ;
+;      - Mux19~0                                                   ; 0                 ; 6       ;
+;      - Mux18~0                                                   ; 0                 ; 6       ;
+;      - comparador:comparador4bit|Grt~1                           ; 0                 ; 6       ;
+;      - subtracao_De_4bits:subtracao4bit|full_adder:stage2|cout~0 ; 0                 ; 6       ;
+;      - Mux33~1                                                   ; 0                 ; 6       ;
+;      - somador_de_4bits:soma4bit|full_adder:stage2|cout~0        ; 0                 ; 6       ;
+;      - Mux8~7                                                    ; 0                 ; 6       ;
 ; SW[6]                                                            ;                   ;         ;
 ;      - comparador:comparador4bit|i[3]~1                          ; 0                 ; 6       ;
 ;      - Mux7~2                                                    ; 0                 ; 6       ;
@@ -1884,25 +1893,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux27~0                                                   ; 0                 ; 6       ;
 ;      - Mux26~0                                                   ; 0                 ; 6       ;
 ;      - Mux25~0                                                   ; 0                 ; 6       ;
-;      - LEDR~2                                                    ; 0                 ; 6       ;
-;      - LEDR~3                                                    ; 0                 ; 6       ;
-;      - subtracao_De_4bits:subtracao4bit|full_adder:stage3|cout~0 ; 0                 ; 6       ;
-;      - somador_de_4bits:soma4bit|full_adder:stage3|cout~0        ; 0                 ; 6       ;
+;      - Mux37~2                                                   ; 0                 ; 6       ;
+;      - Mux36~0                                                   ; 0                 ; 6       ;
+;      - Mux34~0                                                   ; 0                 ; 6       ;
+;      - Mux33~0                                                   ; 0                 ; 6       ;
+;      - Mux32~1                                                   ; 0                 ; 6       ;
 ; SW[10]                                                           ;                   ;         ;
-;      - comparador:comparador4bit|i[3]~1                          ; 0                 ; 6       ;
-;      - Mux7~2                                                    ; 0                 ; 6       ;
-;      - Mux7~5                                                    ; 0                 ; 6       ;
-;      - Mux24~0                                                   ; 0                 ; 6       ;
-;      - Mux23~0                                                   ; 0                 ; 6       ;
-;      - Mux22~0                                                   ; 0                 ; 6       ;
-;      - Mux21~0                                                   ; 0                 ; 6       ;
-;      - Mux20~0                                                   ; 0                 ; 6       ;
-;      - Mux19~0                                                   ; 0                 ; 6       ;
-;      - Mux18~0                                                   ; 0                 ; 6       ;
-;      - LEDR~2                                                    ; 0                 ; 6       ;
-;      - LEDR~3                                                    ; 0                 ; 6       ;
-;      - subtracao_De_4bits:subtracao4bit|full_adder:stage3|cout~0 ; 0                 ; 6       ;
-;      - somador_de_4bits:soma4bit|full_adder:stage3|cout~0        ; 0                 ; 6       ;
+;      - comparador:comparador4bit|i[3]~1                          ; 1                 ; 6       ;
+;      - Mux7~2                                                    ; 1                 ; 6       ;
+;      - Mux7~5                                                    ; 1                 ; 6       ;
+;      - Mux24~0                                                   ; 1                 ; 6       ;
+;      - Mux23~0                                                   ; 1                 ; 6       ;
+;      - Mux22~0                                                   ; 1                 ; 6       ;
+;      - Mux21~0                                                   ; 1                 ; 6       ;
+;      - Mux20~0                                                   ; 1                 ; 6       ;
+;      - Mux19~0                                                   ; 1                 ; 6       ;
+;      - Mux18~0                                                   ; 1                 ; 6       ;
+;      - Mux37~2                                                   ; 1                 ; 6       ;
+;      - Mux36~0                                                   ; 1                 ; 6       ;
+;      - Mux34~0                                                   ; 1                 ; 6       ;
+;      - Mux33~0                                                   ; 1                 ; 6       ;
+;      - Mux32~1                                                   ; 1                 ; 6       ;
 +------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1911,23 +1922,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 84 / 342,891 ( < 1 % )  ;
-; C16 interconnects     ; 22 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 200 / 209,544 ( < 1 % ) ;
-; Direct links          ; 7 / 342,891 ( < 1 % )   ;
+; Block interconnects   ; 97 / 342,891 ( < 1 % )  ;
+; C16 interconnects     ; 23 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 201 / 209,544 ( < 1 % ) ;
+; Direct links          ; 16 / 342,891 ( < 1 % )  ;
 ; Global clocks         ; 0 / 20 ( 0 % )          ;
-; Local interconnects   ; 22 / 119,088 ( < 1 % )  ;
-; R24 interconnects     ; 32 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 107 / 289,782 ( < 1 % ) ;
+; Local interconnects   ; 24 / 119,088 ( < 1 % )  ;
+; R24 interconnects     ; 29 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 98 / 289,782 ( < 1 % )  ;
 +-----------------------+-------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 14.40) ; Number of LABs  (Total = 5) ;
+; Number of Logic Elements  (Average = 12.67) ; Number of LABs  (Total = 6) ;
 +---------------------------------------------+-----------------------------+
-; 1                                           ; 0                           ;
+; 1                                           ; 1                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
@@ -1936,23 +1947,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
-; 10                                          ; 1                           ;
+; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
+; 12                                          ; 1                           ;
 ; 13                                          ; 0                           ;
 ; 14                                          ; 0                           ;
-; 15                                          ; 2                           ;
-; 16                                          ; 2                           ;
+; 15                                          ; 1                           ;
+; 16                                          ; 3                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 14.40) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced  (Average = 12.67) ; Number of LABs  (Total = 6) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
+; 1                                            ; 1                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
@@ -1961,58 +1972,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
-; 10                                           ; 1                           ;
+; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
+; 12                                           ; 1                           ;
 ; 13                                           ; 0                           ;
 ; 14                                           ; 0                           ;
-; 15                                           ; 2                           ;
-; 16                                           ; 2                           ;
+; 15                                           ; 1                           ;
+; 16                                           ; 3                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 9.80) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced Out  (Average = 8.83) ; Number of LABs  (Total = 6) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
+; 1                                               ; 1                           ;
 ; 2                                               ; 0                           ;
 ; 3                                               ; 0                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
-; 6                                               ; 2                           ;
-; 7                                               ; 0                           ;
+; 6                                               ; 1                           ;
+; 7                                               ; 1                           ;
 ; 8                                               ; 0                           ;
 ; 9                                               ; 0                           ;
 ; 10                                              ; 0                           ;
-; 11                                              ; 1                           ;
-; 12                                              ; 0                           ;
-; 13                                              ; 2                           ;
+; 11                                              ; 0                           ;
+; 12                                              ; 1                           ;
+; 13                                              ; 1                           ;
+; 14                                              ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.60) ; Number of LABs  (Total = 5) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 2                           ;
-; 9                                           ; 1                           ;
-; 10                                          ; 1                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 1                           ;
-+---------------------------------------------+-----------------------------+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++----------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 10.17) ; Number of LABs  (Total = 6) ;
++----------------------------------------------+-----------------------------+
+; 0                                            ; 0                           ;
+; 1                                            ; 0                           ;
+; 2                                            ; 0                           ;
+; 3                                            ; 0                           ;
+; 4                                            ; 1                           ;
+; 5                                            ; 0                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 0                           ;
+; 8                                            ; 0                           ;
+; 9                                            ; 0                           ;
+; 10                                           ; 3                           ;
+; 11                                           ; 1                           ;
+; 12                                           ; 0                           ;
+; 13                                           ; 0                           ;
+; 14                                           ; 0                           ;
+; 15                                           ; 0                           ;
+; 16                                           ; 1                           ;
++----------------------------------------------+-----------------------------+
 
 
 +------------------------------------------+
@@ -2111,10 +2126,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LEDR[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LEDR[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[8]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2566,7 +2581,7 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X104_Y12 to location X115_Y23
@@ -2583,10 +2598,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/output_files/Projeto1.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 368 warnings
-    Info: Peak virtual memory: 5825 megabytes
-    Info: Processing ended: Wed May 21 15:15:26 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 5828 megabytes
+    Info: Processing ended: Thu May 22 12:18:15 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +----------------------------+

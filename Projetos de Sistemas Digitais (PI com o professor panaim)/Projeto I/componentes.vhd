@@ -21,7 +21,7 @@ package componentes is
             x,y : in  std_logic_vector(3 downto 0);
             s : out  std_logic_vector(3 downto 0);            -- bits de A, B e soma
             Cout          : out std_logic                       -- carry out final
-            zero          : out std_logic                    -- zero
+
         );
     end component;
 
@@ -31,7 +31,7 @@ package componentes is
             x,y : in  std_logic_vector(3 downto 0);           -- bits de A
             d : out std_logic_vector(3 downto 0);           -- bits da diferença
             overflow           : out std_logic           -- overflow
-            zero          : out std_logic                    -- zero
+
         );
     end component;
 
@@ -52,7 +52,6 @@ package componentes is
             Equ             : out std_logic;           -- igual
             Grt             : out std_logic;           -- maior que
             Lst             : out std_logic             -- menor que
- 
         );
     end component;
         

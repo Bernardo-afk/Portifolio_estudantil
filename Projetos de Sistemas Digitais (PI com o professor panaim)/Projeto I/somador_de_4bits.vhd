@@ -13,15 +13,12 @@ entity somador_de_4bits is
     x,y : in  std_logic_vector(3 downto 0);
     s : out  std_logic_vector(3 downto 0);            -- bits de A, B e soma
     Cout          : out std_logic                       -- carry out final
-    zero          : out std_logic                    -- zero
-
   );
 end entity somador_de_4bits;
 
 architecture estrutura_do_somador_de_4bits of somador_de_4bits is
   signal c : std_logic_vector(3 downto 0);              -- sinal de carry interno
 begin
-
 
 -- stagios para somar os bits de A e B
 
@@ -66,10 +63,7 @@ begin
     );
 
 
-    -- demonstra se o resultado da soma é 0 e acende o led conforme for 
-    with sum select
-  zero <= '1' when "0000",
-          '0' when others;
+
 
 end architecture estrutura_do_somador_de_4bits;
 

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Projeto1
-Wed May 21 15:15:33 2025
+Thu May 22 12:18:21 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -291,10 +291,10 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
-; SW[3]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[2]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[7]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[3]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[7]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[2]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[4]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[8]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -469,9 +469,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 11    ; 11   ;
-; Unconstrained Input Port Paths  ; 203   ; 203  ;
-; Unconstrained Output Ports      ; 33    ; 33   ;
-; Unconstrained Output Port Paths ; 203   ; 203  ;
+; Unconstrained Input Port Paths  ; 217   ; 217  ;
+; Unconstrained Output Ports      ; 34    ; 34   ;
+; Unconstrained Output Port Paths ; 217   ; 217  ;
 +---------------------------------+-------+------+
 
 
@@ -528,6 +528,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX6[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX6[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -588,6 +589,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX6[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX6[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -601,7 +603,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed May 21 15:15:31 2025
+    Info: Processing started: Thu May 22 12:18:20 2025
 Info: Command: quartus_sta Projeto1 -c Projeto1
 Info: qsta_default_script.tcl version: #3
 Warning (20013): Ignored 407 assignments for entity "DE2_115" -- entity does not exist in design
@@ -1057,9 +1059,9 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 413 warnings
-    Info: Peak virtual memory: 4860 megabytes
-    Info: Processing ended: Wed May 21 15:15:33 2025
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Thu May 22 12:18:21 2025
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 

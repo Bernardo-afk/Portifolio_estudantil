@@ -36,8 +36,8 @@ architecture estrutura_da_ula of ula is
 			-- SIGNALS que conversam com a placa ( led , switch)
 	signal seletor : std_logic_vector(2 downto 0); 	-- sinal para os seletor SW0 SW1 SW2
 	signal Aluop : std_logic_vector(2 downto 0);		-- sinal de controle da ULA
-    signal Cout,zero,overflow,Equ,Grt,Lst : std_logic; -- sinais dos led's
-	
+    signal Cout,overflow,Equ,Grt,Lst : std_logic; -- sinais dos led's
+
 
 
 
@@ -73,7 +73,7 @@ architecture estrutura_da_ula of ula is
         y => b,
         s => somador,
         Cout => Cout
-		zero => zero
+
     );
 
     subtracao4bit : subtracao_De_4bits port map(
@@ -81,7 +81,7 @@ architecture estrutura_da_ula of ula is
         y => b,
         d => subtracao,
          overflow => overflow
-		 zero => zero
+
     );
 
     mult2bit : multiplicador_de_2bits port map(
@@ -96,7 +96,7 @@ architecture estrutura_da_ula of ula is
         Equ => Equ,
         Grt => Grt,
         Lst => Lst
-		zero => zero
+	
 
     );
 
@@ -200,14 +200,16 @@ architecture estrutura_da_ula of ula is
 
 		-- Lógica para que o led 0 somente acenda na operação de soma ( Que pode ocorrer carry out)
 		with SW(2 downto 0) select
-		LED(0) <= Cout when "100",
+		LEDR(0) <= Cout when "100",
 				'0'  when others;
 
-				LEDR(1) <= zero;
+				with SW(10 downto 3) select
+				LEDR(1) <= '1' when "00000000",
+						'0' when others;
 
 		-- Lógica para que o led 2 somente acenda quando a operação de subtração ocorrer overflow
 				with SW(2 downto 0) select
-				LED(2) <= overflow when "100",
+				LEDR(2) <= overflow when "100",
 						'0'  when others;
       
 		
@@ -234,3 +236,7 @@ architecture estrutura_da_ula of ula is
    end estrutura_da_ula;
     
     
+   --- Nuancias do código 
+			-- Caso o resultado da soma dê overflow, a saida resultado, mostrará o quanto ee ecede 
+			-- caso o resultado da subtração dê negativo , não configurei para isso, tal que resultará no resultado em complemento de 2 (como o sr informou na aula prática)
+	

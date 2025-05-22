@@ -9,7 +9,7 @@ port(
     Equ             : out std_logic;           -- igual
     Grt             : out std_logic;           -- maior que
     Lst             : out std_logic             -- menor que
-    zero            : out std_logic            -- zero
+
 
 );
 end comparador; 
@@ -26,13 +26,6 @@ begin
     Grt <= (x(3) and not y(3)) or (i(3) and x(2) and not y(2)) or (i(3) and i(2) and x(1) and not y(1)) or (i(3) and i(2) and i(1) and x(0) and not y(0));
     Lst <= Equ nor Grt;
   
-
--- testar se funciona
-	with Equ & Grt & Lst select
-  zero <= '1' when "0000",   -- só zero=1 se Equ=Grt=Lst='0'
-          '0' when others;
-	
-
 end arquitetura_Do_Comparador;
 
 

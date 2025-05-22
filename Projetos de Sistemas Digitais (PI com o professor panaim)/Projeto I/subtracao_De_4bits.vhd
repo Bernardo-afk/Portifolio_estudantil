@@ -10,13 +10,16 @@ entity subtracao_De_4bits is
     x,y : in  std_logic_vector(3 downto 0);           -- bits de A
     d : out std_logic_vector(3 downto 0);           -- bits da diferença
     overflow           : out std_logic           -- overflow
-    zero          : out std_logic                    -- zero
+
   );
 end entity subtracao_De_4bits;
 
 architecture arquitetura_do_subtrator of subtracao_De_4bits is
-  signal c,b : std_logic_vector(3 downto 0);          -- sinais de carry interno e bits de b invertidos
-begin
+  signal c,b ,resultado : std_logic_vector(3 downto 0);          -- sinais de carry interno e bits de b invertidos
+
+  
+  
+  begin
   -- Gera o complemento de 1 de cada bit de B (segundo numero) 
   b(0) <= not y(0);
   b(1) <= not y(1);
@@ -77,12 +80,9 @@ begin
   
 
  overflow <= not c(3);
- 
 
- -- -- Variável que indica se o resultado da subtração é igual a zero ( E atribuirá al led zero o resultado)
- with sum select
- zero <= '1' when "0000",
-         '0' when others;
+
+
 
 end architecture arquitetura_do_subtrator;
 

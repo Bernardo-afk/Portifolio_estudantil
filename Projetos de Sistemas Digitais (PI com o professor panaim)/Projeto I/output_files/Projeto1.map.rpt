@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Projeto1
-Wed May 21 15:15:17 2025
+Thu May 22 12:18:07 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -47,13 +47,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 21 15:15:17 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 22 12:18:07 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Projeto1                                    ;
 ; Top-level Entity Name              ; ula                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 72                                          ;
-;     Total combinational functions  ; 72                                          ;
+; Total logic elements               ; 76                                          ;
+;     Total combinational functions  ; 76                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 46                                          ;
@@ -187,16 +187,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 72          ;
+; Estimated Total logic elements              ; 76          ;
 ;                                             ;             ;
-; Total combinational functions               ; 72          ;
+; Total combinational functions               ; 76          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 48          ;
-;     -- 3 input functions                    ; 21          ;
-;     -- <=2 input functions                  ; 3           ;
+;     -- 4 input functions                    ; 52          ;
+;     -- 3 input functions                    ; 20          ;
+;     -- <=2 input functions                  ; 4           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 72          ;
+;     -- normal mode                          ; 76          ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
@@ -207,10 +207,10 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; SW[0]~input ;
-; Maximum fan-out                             ; 18          ;
-; Total fan-out                               ; 340         ;
-; Average fan-out                             ; 2.07        ;
+; Maximum fan-out node                        ; SW[3]~input ;
+; Maximum fan-out                             ; 19          ;
+; Total fan-out                               ; 356         ;
+; Average fan-out                             ; 2.12        ;
 +---------------------------------------------+-------------+
 
 
@@ -219,19 +219,19 @@ refer to the applicable agreement for further details.
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name            ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+------------------------+--------------+
-; |ula                                  ; 72 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |ula                                                    ; ula                    ; work         ;
+; |ula                                  ; 76 (62)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |ula                                                    ; ula                    ; work         ;
 ;    |comparador:comparador4bit|        ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|comparador:comparador4bit                          ; comparador             ; work         ;
 ;    |multiplicador_de_2bits:mult2bit|  ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|multiplicador_de_2bits:mult2bit                    ; multiplicador_de_2bits ; work         ;
 ;       |full_adder:stage1|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|multiplicador_de_2bits:mult2bit|full_adder:stage1  ; full_adder             ; work         ;
 ;       |full_adder:stage2|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|multiplicador_de_2bits:mult2bit|full_adder:stage2  ; full_adder             ; work         ;
-;    |somador_de_4bits:soma4bit|        ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|somador_de_4bits:soma4bit                          ; somador_de_4bits       ; work         ;
+;    |somador_de_4bits:soma4bit|        ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|somador_de_4bits:soma4bit                          ; somador_de_4bits       ; work         ;
 ;       |full_adder:stage1|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|somador_de_4bits:soma4bit|full_adder:stage1        ; full_adder             ; work         ;
 ;       |full_adder:stage2|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|somador_de_4bits:soma4bit|full_adder:stage2        ; full_adder             ; work         ;
-;       |full_adder:stage3|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|somador_de_4bits:soma4bit|full_adder:stage3        ; full_adder             ; work         ;
-;    |subtracao_De_4bits:subtracao4bit| ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|subtracao_De_4bits:subtracao4bit                   ; subtracao_De_4bits     ; work         ;
+;       |full_adder:stage3|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|somador_de_4bits:soma4bit|full_adder:stage3        ; full_adder             ; work         ;
+;    |subtracao_De_4bits:subtracao4bit| ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|subtracao_De_4bits:subtracao4bit                   ; subtracao_De_4bits     ; work         ;
 ;       |full_adder:stage1|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|subtracao_De_4bits:subtracao4bit|full_adder:stage1 ; full_adder             ; work         ;
 ;       |full_adder:stage2|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|subtracao_De_4bits:subtracao4bit|full_adder:stage2 ; full_adder             ; work         ;
-;       |full_adder:stage3|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|subtracao_De_4bits:subtracao4bit|full_adder:stage3 ; full_adder             ; work         ;
+;       |full_adder:stage3|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ula|subtracao_De_4bits:subtracao4bit|full_adder:stage3 ; full_adder             ; work         ;
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -302,16 +302,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 46                          ;
-; cycloneiii_lcell_comb ; 79                          ;
-;     normal            ; 79                          ;
+; cycloneiii_lcell_comb ; 83                          ;
+;     normal            ; 83                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 48                          ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 52                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.26                        ;
+; Average LUT depth     ; 4.17                        ;
 +-----------------------+-----------------------------+
 
 
@@ -330,7 +330,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed May 21 15:15:05 2025
+    Info: Processing started: Thu May 22 12:17:56 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto1 -c Projeto1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -338,10 +338,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
     Info (12022): Found design unit 1: ula-estrutura_da_ula File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 18
     Info (12023): Found entity 1: ula File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file subtracao_de_4bits.vhd
-    Info (12022): Found design unit 1: subtracao_De_4bits-arquitetura_do_subtrator File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/subtracao_De_4bits.vhd Line: 16
+    Info (12022): Found design unit 1: subtracao_De_4bits-arquitetura_do_subtrator File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/subtracao_De_4bits.vhd Line: 17
     Info (12023): Found entity 1: subtracao_De_4bits File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/subtracao_De_4bits.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file somador_de_4bits.vhd
-    Info (12022): Found design unit 1: somador_de_4bits-estrutura_do_somador_de_4bits File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador_de_4bits.vhd Line: 20
+    Info (12022): Found design unit 1: somador_de_4bits-estrutura_do_somador_de_4bits File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador_de_4bits.vhd Line: 19
     Info (12023): Found entity 1: somador_de_4bits File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador_de_4bits.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file multiplicador_de_2bits.vhd
     Info (12022): Found design unit 1: multiplicador_de_2bits-arquitetura_Do_Multiplicador File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/multiplicador_de_2bits.vhd Line: 16
@@ -349,23 +349,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file multipl
 Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
     Info (12022): Found design unit 1: full_adder-arquitetura_do_fulladder File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd Line: 18
     Info (12023): Found entity 1: full_adder File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/full_adder.vhd Line: 8
-Info (12021): Found 0 design units, including 0 entities, in source file display7seg.vhd
+Warning (12019): Can't analyze file -- file display7seg.vhd is missing
 Info (12021): Found 1 design units, including 0 entities, in source file componentes.vhd
     Info (12022): Found design unit 1: componentes File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/componentes.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
-    Info (12022): Found design unit 1: comparador-arquitetura_Do_Comparador File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd Line: 16
+    Info (12022): Found design unit 1: comparador-arquitetura_Do_Comparador File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd Line: 17
     Info (12023): Found entity 1: comparador File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/comparador.vhd Line: 6
 Info (12127): Elaborating entity "ula" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at ula.vhd(29): used implicit default value for signal "zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 29
 Warning (10873): Using initial value X (don't care) for net "LEDR[6]" at ula.vhd(14) File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 14
-Info (12128): Elaborating entity "somador_de_4bits" for hierarchy "somador_de_4bits:soma4bit" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 51
-Info (12128): Elaborating entity "full_adder" for hierarchy "somador_de_4bits:soma4bit|full_adder:stage0" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador_de_4bits.vhd Line: 28
-Info (12128): Elaborating entity "subtracao_De_4bits" for hierarchy "subtracao_De_4bits:subtracao4bit" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 59
-Info (12128): Elaborating entity "multiplicador_de_2bits" for hierarchy "multiplicador_de_2bits:mult2bit" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 66
-Info (12128): Elaborating entity "comparador" for hierarchy "comparador:comparador4bit" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 72
+Info (12128): Elaborating entity "somador_de_4bits" for hierarchy "somador_de_4bits:soma4bit" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 70
+Info (12128): Elaborating entity "full_adder" for hierarchy "somador_de_4bits:soma4bit|full_adder:stage0" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/somador_de_4bits.vhd Line: 26
+Info (12128): Elaborating entity "subtracao_De_4bits" for hierarchy "subtracao_De_4bits:subtracao4bit" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 79
+Info (12128): Elaborating entity "multiplicador_de_2bits" for hierarchy "multiplicador_de_2bits:mult2bit" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 87
+Info (12128): Elaborating entity "comparador" for hierarchy "comparador:comparador4bit" File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 93
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[6]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 14
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: D:/repositorio_faculdade/Portifolio_estudantil/Projetos de Sistemas Digitais (PI com o professor panaim)/Projeto I/ula.vhd Line: 14
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 407 assignments for entity "DE2_115" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT -entity DE2_115 was ignored
@@ -777,14 +775,14 @@ Warning (20013): Ignored 407 assignments for entity "DE2_115" -- entity does not
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE2_115 was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 118 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 35 output pins
-    Info (21061): Implemented 72 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 414 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Wed May 21 15:15:17 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:23
+    Info (21061): Implemented 76 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 413 warnings
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Thu May 22 12:18:07 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:22
 
 
