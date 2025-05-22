@@ -197,9 +197,19 @@ architecture estrutura_da_ula of ula is
 		
 		
 		-- Área destinada ao mapeamento dos led's
-		LEDR(0) <= Cout;
-        LEDR(1) <= zero;
-		LEDR(2) <= overflow;
+
+		-- Lógica para que o led 0 somente acenda na operação de soma ( Que pode ocorrer carry out)
+		with SW(2 downto 0) select
+		LED(0) <= Cout when "100",
+				'0'  when others;
+
+				LEDR(1) <= zero;
+
+		-- Lógica para que o led 2 somente acenda quando a operação de subtração ocorrer overflow
+				with SW(2 downto 0) select
+				LED(2) <= overflow when "100",
+						'0'  when others;
+      
 		
 		
 	
